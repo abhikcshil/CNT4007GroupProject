@@ -1,0 +1,13 @@
+===== Log for Peer 1001 =====
+[2025/10/21 18:41:40] Peer 1001 makes a connection to Peer 1002.
+[2025/10/21 18:41:40] Peer 1001 is connected from Peer 1003.
+[2025/10/21 18:41:40] Peer 1001 has the preferred neighbors [1002, 1003].
+[2025/10/21 18:41:40] Peer 1001 has the optimistically unchoked neighbor 1004.
+[2025/10/21 18:41:40] Peer 1001 is unchoked by Peer 1002.
+[2025/10/21 18:41:40] Peer 1001 is choked by Peer 1005.
+[2025/10/21 18:41:40] Peer 1001 received the 'have' message from Peer 1003 for the piece 15.
+[2025/10/21 18:41:40] Peer 1001 received the 'interested' message from Peer 1004.
+[2025/10/21 18:41:40] Peer 1001 received the 'not interested' message from Peer 1005.
+[2025/10/21 18:41:40] Peer 1001 has downloaded the piece 15 from Peer 1002. Now the number of pieces it has is 42.
+[2025/10/21 18:41:40] Peer 1001 has downloaded the complete file.
+[2025/10/21 18:41:40] Debug: test complete.
