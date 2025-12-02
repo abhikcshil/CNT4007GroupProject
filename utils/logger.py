@@ -1,36 +1,25 @@
-import os
-import threading
+from pathlib import Path
 from datetime import datetime
+import threading
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
 
 class Logger:
-    """
-    Thread-safe logger for each peer process.
-    Each peer writes to its own log file: log_peer_[peerID].log
-    """
-
-    def __init__(self, peer_id: int, log_dir: str = "."):
+    def __init__(self, peer_id: int):
         self.peer_id = peer_id
-        self.log_path = os.path.join(log_dir, f"log_peer_{peer_id}.log")
-        self.lock = threading.Lock()
+        self._lock = threading.Lock()
+        self.log_path = PROJECT_ROOT / f"log_peer_{peer_id}.log"
 
-        # Ensure directory exists
-        os.makedirs(os.path.dirname(self.log_path), exist_ok=True)
-        # Start log file fresh each run
-        with open(self.log_path, "w", encoding="utf-8") as f:
+        with self.log_path.open("w", encoding="utf8") as f:
             f.write(f"===== Log for Peer {peer_id} =====\n")
 
-    # --------------------------
-    # Helper
-    # --------------------------
-    def _timestamp(self) -> str:
-        """Return formatted timestamp."""
-        return datetime.now().strftime("[%Y/%m/%d %H:%M:%S]")
+    def _ts(self) -> str:
+        return datetime.now().strftime("%Y/%m/%d %H:%M:%S")
 
-    def _write(self, message: str):
-        """Thread-safe write to log file."""
-        with self.lock:
-            with open(self.log_path, "a", encoding="utf-8") as f:
-                f.write(f"{self._timestamp()} {message}\n")
+    def _write(self, text: str):
+        with self._lock, self.log_path.open("a", encoding="utf8") as f:
+            f.write(f"[{self._ts()}] {text}\n")
 
     # --------------------------
     # Log Events
@@ -42,21 +31,26 @@ class Logger:
 
     def connection_received(self, peer1: int, peer2: int):
         self._write(f"Peer {peer1} is connected from Peer {peer2}.")
+    def choked_by(self, me_id: int, other_id: int):
+        self._write(f"Peer {me_id} is choked by Peer {other_id}.")
 
-    # Neighbor state
-    def change_preferred_neighbors(self, peer_id: int, neighbor_ids):
-        ids = ", ".join(map(str, neighbor_ids))
-        self._write(f"Peer {peer_id} has the preferred neighbors [{ids}].")
+    def unchoked_by(self, me_id: int, other_id: int):
+        self._write(f"Peer {me_id} is unchoked by Peer {other_id}.")
 
-    def change_optimistic_neighbor(self, peer_id: int, opt_id: int):
-        self._write(f"Peer {peer_id} has the optimistically unchoked neighbor {opt_id}.")
+    def choke(self, me_id: int, other_id: int):
+        self._write(f"Peer {me_id} chokes Peer {other_id}.")
 
-    # Choke / Unchoke
-    def unchoked_by(self, peer1: int, peer2: int):
-        self._write(f"Peer {peer1} is unchoked by Peer {peer2}.")
+    def unchoke(self, me_id: int, other_id: int):
+        self._write(f"Peer {me_id} unchokes Peer {other_id}.")
 
-    def choked_by(self, peer1: int, peer2: int):
-        self._write(f"Peer {peer1} is choked by Peer {peer2}.")
+    def change_preferred_neighbors(self, me_id: int, neighbor_ids):
+        ids_str = ", ".join(str(i) for i in neighbor_ids)
+        self._write(f"Peer {me_id} has the preferred neighbors [{ids_str}].")
+
+    def change_optimistic_neighbor(self, me_id: int, neighbor_id: int):
+        self._write(
+            f"Peer {me_id} has the optimistically unchoked neighbor {neighbor_id}."
+        )
 
     # Message receipt
     def received_have(self, peer1: int, peer2: int, piece_index: int):
