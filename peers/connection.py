@@ -201,7 +201,7 @@ class PeerConnection(threading.Thread):
         self.remote_bitfield.set_have(piece_index)
 
         if self.logger:
-            self.logger.received_have(self.me_id, self.remote_id, piece_index)
+            self.logger.received_have(self.me_id, self.remote_id, piece_index, self.remote_bitfield)
 
         self._update_interest()
         self._maybe_request_piece()
