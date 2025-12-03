@@ -245,6 +245,7 @@ class PeerConnection(threading.Thread):
                     self.me_id, self.remote_id, piece_index, self.have_count
                 )
             self.send_message(make_have(piece_index))
+            self.logger.sent_have(self.me_id, self.remote_id, piece_index)
 
         if piece_index in self.requested:
             self.requested.remove(piece_index)
