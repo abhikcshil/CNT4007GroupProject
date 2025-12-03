@@ -129,7 +129,7 @@ class Logger:
     # Message receipt
     def received_have(self, peer1: int, peer2: int, piece_index: int, remote_bitfield):
         self._write(f"Peer {peer1} received the 'have' message from Peer {peer2} for the piece {piece_index}.")
-        self._write(f"Peer {peer1} updated its view of Peer {peer2}'s bitfield: {remote_bitfield}.")
+        self._write(f"Peer {peer1} updated its view of Peer {peer2}'s bitfield: {remote_bitfield.to_bytes().hex()}.")
 
     def received_interested(self, peer1: int, peer2: int):
         self._write(f"Peer {peer1} received the 'interested' message from Peer {peer2}.")

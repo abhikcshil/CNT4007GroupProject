@@ -218,6 +218,7 @@ def preferred_unchoke_loop(
     logger: Logger,
     num_pref: int,
     interval: int,
+    optimistic_state: dict,  # shared state with optimistic loop
 ):
     current_preferred: set[int] = set()
 
@@ -235,10 +236,12 @@ def preferred_unchoke_loop(
                 candidates.append((downloaded, pid, conn))
 
         if not candidates:
-            # no interested peers, choke all
+            # no interested peers, choke all except optimistic
+            optimistic_id = optimistic_state.get('current')
             with neighbors_lock:
                 for pid, conn in neighbors.items():
-                    conn.choke()
+                    if pid != optimistic_id:
+                        conn.choke()
             current_preferred.clear()
             logger.change_preferred_neighbors(me_id, [])
             continue
@@ -246,6 +249,15 @@ def preferred_unchoke_loop(
         if not my_bitfield.is_full():
             # sort by download amount, desc
             candidates.sort(key=lambda x: x[0], reverse=True)
+            # break ties randomly
+            # group by download rate and shuffle within groups
+            from itertools import groupby
+            grouped = []
+            for rate, group in groupby(candidates, key=lambda x: x[0]):
+                group_list = list(group)
+                random.shuffle(group_list)
+                grouped.extend(group_list)
+            candidates = grouped
         else:
             # as a seed, pick random interested neighbors
             random.shuffle(candidates)
@@ -255,11 +267,13 @@ def preferred_unchoke_loop(
             selected_ids.add(pid)
 
         # apply choke/unchoke
+        # Do NOT choke the optimistically unchoked neighbor
+        optimistic_id = optimistic_state.get('current')
         with neighbors_lock:
             for pid, conn in neighbors.items():
                 if pid in selected_ids:
                     conn.unchoke()
-                else:
+                elif pid != optimistic_id:  # don't choke optimistic neighbor
                     conn.choke()
 
         logger.change_preferred_neighbors(me_id, sorted(selected_ids))
@@ -271,6 +285,7 @@ def optimistic_unchoke_loop(
     neighbors_lock: threading.Lock,
     logger: Logger,
     interval: int,
+    optimistic_state: dict,  # shared state with preferred loop
 ):
     while True:
         time.sleep(interval)
@@ -285,10 +300,14 @@ def optimistic_unchoke_loop(
                 candidates.append((pid, conn))
 
         if not candidates:
+            # no choked interested neighbors, clear optimistic
+            optimistic_state['current'] = None
             continue
 
         pid, conn = random.choice(candidates)
-        conn.unchoke()
+        with neighbors_lock:
+            conn.unchoke()
+        optimistic_state['current'] = pid
         logger.change_optimistic_neighbor(me_id, pid)
 
 
@@ -373,6 +392,9 @@ def main():
         )
 
     # start choking managers
+    # shared state to track optimistically unchoked neighbor
+    optimistic_state = {'current': None}
+    
     pref_thread = threading.Thread(
         target=preferred_unchoke_loop,
         args=(
@@ -383,6 +405,7 @@ def main():
             logger,
             num_pref,
             unchoke_interval,
+            optimistic_state,
         ),
         daemon=True,
     )
@@ -396,6 +419,7 @@ def main():
             neighbors_lock,
             logger,
             optimistic_interval,
+            optimistic_state,
         ),
         daemon=True,
     )
