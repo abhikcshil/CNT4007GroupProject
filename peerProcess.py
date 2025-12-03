@@ -140,6 +140,8 @@ class PeerServer(threading.Thread):
                     piece_size=self.piece_size,
                     file_name=self.file_name,
                     logger=self.logger,
+                    neighbors=self.neighbors,
+                    neighbors_lock=self.neighbors_lock,
                 )
                 with self.neighbors_lock:
                     self.neighbors[other_id] = pc
@@ -195,6 +197,8 @@ def connect_to(
                 piece_size=piece_size,
                 file_name=file_name,
                 logger=logger,
+                neighbors=neighbors,
+                neighbors_lock=neighbors_lock,
             )
             with neighbors_lock:
                 neighbors[peer_id] = pc

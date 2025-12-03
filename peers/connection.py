@@ -41,6 +41,8 @@ class PeerConnection(threading.Thread):
         piece_size: int,
         file_name: str,
         logger: Optional[Logger] = None,
+        neighbors: Optional[dict] = None,
+        neighbors_lock: Optional[object] = None,
     ):
         super().__init__(daemon=True)
         self.me_id = me_id
@@ -51,6 +53,8 @@ class PeerConnection(threading.Thread):
         self.piece_size = piece_size
         self.file_name = file_name
         self.logger = logger
+        self.neighbors = neighbors
+        self.neighbors_lock = neighbors_lock
 
         self.remote_bitfield: Optional[Bitfield] = None
 
@@ -245,13 +249,26 @@ class PeerConnection(threading.Thread):
                 self.logger.downloaded_piece(
                     self.me_id, self.remote_id, piece_index, self.have_count
                 )
-            self.send_message(make_have(piece_index))
-            self.logger.sent_have(self.me_id, self.remote_id, piece_index)
+            # Broadcast have message to ALL neighbors
+            if self.neighbors and self.neighbors_lock:
+                with self.neighbors_lock:
+                    for peer_id, conn in self.neighbors.items():
+                        try:
+                            conn.send_message(make_have(piece_index))
+                            if self.logger:
+                                self.logger.sent_have(self.me_id, peer_id, piece_index)
+                        except Exception:
+                            pass
 
         if piece_index in self.requested:
             self.requested.remove(piece_index)
 
-        self._update_interest()
+        # Update interest for all connections
+        if self.neighbors and self.neighbors_lock:
+            with self.neighbors_lock:
+                for conn in self.neighbors.values():
+                    conn._update_interest()
+        
         self._maybe_request_piece()
 
 
