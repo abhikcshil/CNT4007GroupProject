@@ -1,4 +1,3 @@
-# utils/bitfield.py
 class Bitfield:
     def __init__(self, num_pieces: int):
         self.num_pieces = num_pieces

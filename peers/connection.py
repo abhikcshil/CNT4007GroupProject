@@ -173,6 +173,8 @@ class PeerConnection(threading.Thread):
             return
 
         if t == MessageType.BITFIELD:
+            if self.logger:
+                self.logger.received_bitfield(self.me_id, self.remote_id)
             self._handle_bitfield(msg.payload)
             return
 
@@ -218,6 +220,11 @@ class PeerConnection(threading.Thread):
         except FileNotFoundError:
             return
         msg = make_piece(piece_index, data)
+        
+        
+        if self.logger:
+            self.logger.sent_piece(self.me_id, self.remote_id, piece_index)
+    
         self.send_message(msg)
 
     def _handle_piece(self, payload: bytes):
@@ -242,15 +249,9 @@ class PeerConnection(threading.Thread):
         if piece_index in self.requested:
             self.requested.remove(piece_index)
 
-        # NEW: check if we now have all pieces
-        if self.have_count == self.num_pieces:
-            # Merge pieces into the complete file
-            merge_pieces(self.file_name, self.num_pieces)
-            # if self.logger:
-            #     self.logger.completed_download(self.me_id)
-
         self._update_interest()
         self._maybe_request_piece()
+
 
 
     def _update_interest(self):
@@ -282,6 +283,8 @@ class PeerConnection(threading.Thread):
                 and not self.my_bitfield.has(i)
                 and i not in self.requested
             ):
+                if self.logger:
+                    self.logger.request_piece(self.me_id, self.remote_id, i)
                 self.send_message(make_request(i))
                 self.requested.add(i)
                 break

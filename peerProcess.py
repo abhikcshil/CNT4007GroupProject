@@ -8,6 +8,7 @@ import random
 from pathlib import Path
 from typing import Dict
 
+from utils import logger
 from utils.handshake import pack_handshake, unpack_handshake, TOTAL_LEN as HS_LEN
 from utils.bitfield import Bitfield
 from utils.message import make_bitfield
@@ -115,6 +116,7 @@ class PeerServer(threading.Thread):
                 try:
                     other_id = unpack_handshake(recv_buf)
                     self.logger.connection_received(self.peer_id, other_id)
+                    self.logger.received_handshake(self.peer_id, other_id)
                 except Exception:
                     other_id = -1
 
@@ -123,10 +125,12 @@ class PeerServer(threading.Thread):
                     continue
 
                 conn.sendall(pack_handshake(self.peer_id))
+                self.logger.sent_handshake(self.peer_id, other_id)
 
                 bf_msg = make_bitfield(self.my_bitfield.to_bytes()).encode()
                 conn.sendall(bf_msg)
-
+                self.logger.sent_bitfield(self.peer_id, other_id)
+                
                 pc = PeerConnection(
                     me_id=self.peer_id,
                     remote_id=other_id,
@@ -167,6 +171,7 @@ def connect_to(
             s = socket.create_connection((host, port), timeout=1.5)
 
             s.sendall(pack_handshake(me_id))
+            logger.sent_handshake(me_id, peer_id)
 
             recv_buf = b""
             while len(recv_buf) < HS_LEN:
@@ -176,8 +181,10 @@ def connect_to(
                 recv_buf += chunk
 
             logger.connection_made(me_id, peer_id)
+            logger.received_handshake(me_id, peer_id)
 
             s.sendall(make_bitfield(my_bitfield.to_bytes()).encode())
+            logger.sent_bitfield(me_id, peer_id)
 
             pc = PeerConnection(
                 me_id=me_id,
@@ -331,6 +338,9 @@ def main():
             write_piece(idx, data)
             my_bf.set_have(idx)
 
+    logger.startup(common, me["has"], my_bf)
+    logger.peerinfo_loaded(peers)
+        
     server = PeerServer(
         peer_id=me_id,
         host=me["host"],
@@ -417,7 +427,9 @@ def main():
                             all_not_interested = False
                             break
                     if all_not_interested:
-                        print(f"[DEBUG] Peer {me_id} is terminating main loop.")
+                        logger.custom(
+                            f"Peer {me_id} stops service because all peers have completed download (no neighbor is interested)."
+                        )
                         break
 
     except KeyboardInterrupt:

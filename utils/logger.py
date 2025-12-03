@@ -24,13 +24,72 @@ class Logger:
     # --------------------------
     # Log Events
     # --------------------------
+    
+    def startup(self, common_cfg: dict, has_file: bool, bitfield) -> None:
+        try:
+            bf_hex = bitfield.to_bytes().hex()
+        except Exception:
+            bf_hex = "<unavailable>"
 
+        num_pref = common_cfg.get("NumberOfPreferredNeighbors")
+        unchoke_int = common_cfg.get("UnchokingInterval")
+        opt_int = common_cfg.get("OptimisticUnchokingInterval")
+        file_name = common_cfg.get("FileName")
+        file_size = common_cfg.get("FileSize")
+        piece_size = common_cfg.get("PieceSize")
+
+        msg = (
+            f"Peer {self.peer_id} Start. "
+            f"Config: "
+            f"NumberOfPreferredNeighbors={num_pref}, "
+            f"UnchokingInterval={unchoke_int}, "
+            f"OptimisticUnchokingInterval={opt_int}, "
+            f"FileName={file_name}, "
+            f"FileSize={file_size}, "
+            f"PieceSize={piece_size}. "
+            f"HasFileAtStart={has_file}. "
+            f"InitialBitfield={bf_hex}."
+        )
+        self._write(msg)
+        
+    def peerinfo_loaded(self, peers: list[dict]) -> None:
+        parts = []
+        for p in peers:
+            parts.append(
+                f"id={p['id']},host={p['host']},port={p['port']},has_file={int(p['has'])}"
+            )
+        detail = "; ".join(parts)
+        self._write(
+            f"Peer {self.peer_id} loaded PeerInfo.cfg: {detail}."
+        )
+    
+    
+    # --- Handshake / Bitfield ---
+    def sent_bitfield(self, self_id: int, peer2: int):
+        self._write(f"Peer {self_id} sends the 'bitfield' message to Peer {peer2}.")
+
+    def received_bitfield(self, self_id: int, peer2: int):
+        self._write(f"Peer {self_id} received the 'bitfield' message from Peer {peer2}.")
+        
     # Connection events
     def connection_made(self, peer1: int, peer2: int):
         self._write(f"Peer {peer1} makes a connection to Peer {peer2}.")
 
     def connection_received(self, peer1: int, peer2: int):
         self._write(f"Peer {peer1} is connected from Peer {peer2}.")
+        
+    def sent_handshake(self, me_id: int, other_id: int):
+        self._write(f"Peer {me_id} sends a handshake to Peer {other_id}.")
+
+    def received_handshake(self, me_id: int, other_id: int):
+        self._write(f"Peer {me_id} received a handshake from Peer {other_id}.")
+
+    def sent_bitfield(self, me_id: int, other_id: int):
+        self._write(f"Peer {me_id} sends a bitfield to Peer {other_id}.")
+
+    def received_bitfield(self, me_id: int, other_id: int):
+        self._write(f"Peer {me_id} received a bitfield from Peer {other_id}.")
+
     def choked_by(self, me_id: int, other_id: int):
         self._write(f"Peer {me_id} is choked by Peer {other_id}.")
 
@@ -51,6 +110,13 @@ class Logger:
         self._write(
             f"Peer {me_id} has the optimistically unchoked neighbor {neighbor_id}."
         )
+
+    def request_piece(self, me, remote, index):
+        self._write(f"Peer {me} sent 'request' for piece {index} to Peer {remote}.")
+
+    def sent_piece(self, me, remote, index):
+        self._write(f"Peer {me} sent 'piece' message for piece {index} to Peer {remote}.")
+
 
     # Message receipt
     def received_have(self, peer1: int, peer2: int, piece_index: int):
