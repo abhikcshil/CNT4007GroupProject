@@ -1,0 +1,1146 @@
+===== Log for Peer 1004 =====
+[2025/12/03 18:41:21] Peer 1004 Start. Config: NumberOfPreferredNeighbors=2, UnchokingInterval=5, OptimisticUnchokingInterval=10, FileName=tree.jpg, FileSize=24301474, PieceSize=16384. HasFileAtStart=False. InitialBitfield=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:21] Peer 1004 loaded PeerInfo.cfg: id=1001,host=192.168.0.58,port=16001,has_file=1; id=1002,host=192.168.0.167,port=16002,has_file=0; id=1003,host=192.168.0.167,port=16003,has_file=0; id=1004,host=192.168.0.234,port=16004,has_file=0; id=1005,host=192.168.0.234,port=16005,has_file=0; id=1006,host=192.168.0.234,port=16006,has_file=0.
+[2025/12/03 18:41:22] Peer 1004 sends a handshake to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 makes a connection to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 received a handshake from Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 sends a bitfield to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 received a bitfield from Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 sends a handshake to Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 sent the 'interested' message to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 0 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 makes a connection to Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 received a handshake from Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 sends a bitfield to Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 received a bitfield from Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 sent the 'interested' message to Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 0 to Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 0 from Peer 1001. Now the number of pieces it has is 1.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1001 for the piece 0.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 1 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 1 from Peer 1001. Now the number of pieces it has is 2.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1001 for the piece 1.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 2 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 2 to Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 2 from Peer 1001. Now the number of pieces it has is 3.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1001 for the piece 2.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 3 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 3 to Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 3 from Peer 1002. Now the number of pieces it has is 1.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1002 for the piece 3.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 4 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 4 to Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 4 from Peer 1001. Now the number of pieces it has is 4.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1001 for the piece 4.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 5 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 5 from Peer 1001. Now the number of pieces it has is 5.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1001 for the piece 5.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 6 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 6 to Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 6 from Peer 1002. Now the number of pieces it has is 2.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1002 for the piece 6.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 7 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 7 to Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 7 from Peer 1001. Now the number of pieces it has is 6.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1001 for the piece 7.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 8 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 8 to Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 8 from Peer 1001. Now the number of pieces it has is 7.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 9 to Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1001 for the piece 8.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 9 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 9 from Peer 1002. Now the number of pieces it has is 3.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1002 for the piece 9.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 10 to Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 10 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 10 from Peer 1001. Now the number of pieces it has is 8.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1001 for the piece 10.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 11 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 11 to Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 11 from Peer 1001. Now the number of pieces it has is 9.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1001 for the piece 11.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 12 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 12 to Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 12 from Peer 1002. Now the number of pieces it has is 4.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1002 for the piece 12.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 13 to Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 13 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 13 from Peer 1001. Now the number of pieces it has is 10.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1001 for the piece 13.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 14 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 14 from Peer 1001. Now the number of pieces it has is 11.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1001 for the piece 14.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 15 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 15 to Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 15 from Peer 1001. Now the number of pieces it has is 12.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1001 for the piece 15.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 16 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 16 from Peer 1001. Now the number of pieces it has is 13.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1001 for the piece 16.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 17 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 17 from Peer 1001. Now the number of pieces it has is 14.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1001 for the piece 17.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 18 to Peer 1001.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 18 to Peer 1002.
+[2025/12/03 18:41:22] Peer 1004 has downloaded the piece 18 from Peer 1002. Now the number of pieces it has is 5.
+[2025/12/03 18:41:22] Peer 1004 sent the 'have' message to Peer 1002 for the piece 18.
+[2025/12/03 18:41:22] Peer 1004 sent 'request' for piece 19 to Peer 1002.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 19 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 19 from Peer 1001. Now the number of pieces it has is 15.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1001 for the piece 19.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 20 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 20 from Peer 1001. Now the number of pieces it has is 16.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1001 for the piece 20.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 21 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 21 to Peer 1002.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 21 from Peer 1002. Now the number of pieces it has is 6.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1002 for the piece 21.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 22 to Peer 1002.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 22 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 22 from Peer 1001. Now the number of pieces it has is 17.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1001 for the piece 22.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 23 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 23 to Peer 1002.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 23 from Peer 1001. Now the number of pieces it has is 18.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1001 for the piece 23.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 24 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 24 to Peer 1002.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 24 from Peer 1002. Now the number of pieces it has is 7.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1002 for the piece 24.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 25 to Peer 1002.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 25 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 25 from Peer 1001. Now the number of pieces it has is 19.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1001 for the piece 25.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 26 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 26 to Peer 1002.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 26 from Peer 1001. Now the number of pieces it has is 20.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1001 for the piece 26.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 27 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 27 to Peer 1002.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 27 from Peer 1002. Now the number of pieces it has is 8.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1002 for the piece 27.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 28 to Peer 1002.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 28 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 28 from Peer 1001. Now the number of pieces it has is 21.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1001 for the piece 28.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 29 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 29 from Peer 1001. Now the number of pieces it has is 22.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1001 for the piece 29.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 30 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 30 to Peer 1002.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 30 from Peer 1002. Now the number of pieces it has is 9.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1002 for the piece 30.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 31 to Peer 1002.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 31 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 31 from Peer 1001. Now the number of pieces it has is 23.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1001 for the piece 31.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 32 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 32 from Peer 1001. Now the number of pieces it has is 24.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1001 for the piece 32.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 33 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 33 to Peer 1002.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 33 from Peer 1002. Now the number of pieces it has is 10.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1002 for the piece 33.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 34 to Peer 1002.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 34 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 34 from Peer 1001. Now the number of pieces it has is 25.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1001 for the piece 34.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 35 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 35 from Peer 1001. Now the number of pieces it has is 26.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1001 for the piece 35.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 36 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 36 to Peer 1002.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 36 from Peer 1002. Now the number of pieces it has is 11.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1002 for the piece 36.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 37 to Peer 1002.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 37 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 37 from Peer 1001. Now the number of pieces it has is 27.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1001 for the piece 37.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 38 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 38 to Peer 1002.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 38 from Peer 1001. Now the number of pieces it has is 28.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1001 for the piece 38.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 39 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 39 to Peer 1002.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 39 from Peer 1002. Now the number of pieces it has is 12.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1002 for the piece 39.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 40 to Peer 1002.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 40 to Peer 1001.
+[2025/12/03 18:41:23] Peer 1004 has downloaded the piece 40 from Peer 1001. Now the number of pieces it has is 29.
+[2025/12/03 18:41:23] Peer 1004 sent the 'have' message to Peer 1001 for the piece 40.
+[2025/12/03 18:41:23] Peer 1004 sent 'request' for piece 41 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 41 from Peer 1001. Now the number of pieces it has is 30.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1001 for the piece 41.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 42 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 42 to Peer 1002.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 42 from Peer 1001. Now the number of pieces it has is 31.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1001 for the piece 42.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 43 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 43 to Peer 1002.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 43 from Peer 1002. Now the number of pieces it has is 13.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1002 for the piece 43.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 44 to Peer 1002.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 44 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 44 from Peer 1001. Now the number of pieces it has is 32.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1001 for the piece 44.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 45 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 45 from Peer 1001. Now the number of pieces it has is 33.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1001 for the piece 45.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 46 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 46 to Peer 1002.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 46 from Peer 1002. Now the number of pieces it has is 14.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1002 for the piece 46.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 47 to Peer 1002.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 47 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 47 from Peer 1001. Now the number of pieces it has is 34.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1001 for the piece 47.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 48 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 48 from Peer 1001. Now the number of pieces it has is 35.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1001 for the piece 48.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 49 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 49 to Peer 1002.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 49 from Peer 1002. Now the number of pieces it has is 15.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1002 for the piece 49.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 50 to Peer 1002.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 50 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 50 from Peer 1001. Now the number of pieces it has is 36.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1001 for the piece 50.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 51 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 51 to Peer 1002.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 51 from Peer 1001. Now the number of pieces it has is 37.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1001 for the piece 51.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 52 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 52 to Peer 1002.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 52 from Peer 1002. Now the number of pieces it has is 16.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1002 for the piece 52.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 53 to Peer 1002.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 53 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 53 from Peer 1001. Now the number of pieces it has is 38.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1001 for the piece 53.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 54 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 54 from Peer 1001. Now the number of pieces it has is 39.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1001 for the piece 54.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 55 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 55 to Peer 1002.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 55 from Peer 1002. Now the number of pieces it has is 17.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1002 for the piece 55.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 56 to Peer 1002.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 56 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 56 from Peer 1001. Now the number of pieces it has is 40.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1001 for the piece 56.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 57 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 57 to Peer 1002.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 57 from Peer 1002. Now the number of pieces it has is 18.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1002 for the piece 57.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 58 to Peer 1002.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 58 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 58 from Peer 1001. Now the number of pieces it has is 41.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1001 for the piece 58.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 59 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 59 to Peer 1002.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 59 from Peer 1001. Now the number of pieces it has is 42.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1001 for the piece 59.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 60 to Peer 1001.
+[2025/12/03 18:41:24] Peer 1004 sent the 'not interested' message to Peer 1002.
+[2025/12/03 18:41:24] Peer 1004 has downloaded the piece 60 from Peer 1001. Now the number of pieces it has is 43.
+[2025/12/03 18:41:24] Peer 1004 sent the 'have' message to Peer 1001 for the piece 60.
+[2025/12/03 18:41:24] Peer 1004 sent 'request' for piece 61 to Peer 1001.
+[2025/12/03 18:41:25] Peer 1004 has downloaded the piece 61 from Peer 1001. Now the number of pieces it has is 44.
+[2025/12/03 18:41:25] Peer 1004 sent the 'have' message to Peer 1001 for the piece 61.
+[2025/12/03 18:41:25] Peer 1004 sent 'request' for piece 62 to Peer 1001.
+[2025/12/03 18:41:25] Peer 1004 has downloaded the piece 62 from Peer 1001. Now the number of pieces it has is 45.
+[2025/12/03 18:41:25] Peer 1004 sent the 'have' message to Peer 1001 for the piece 62.
+[2025/12/03 18:41:25] Peer 1004 sent 'request' for piece 63 to Peer 1001.
+[2025/12/03 18:41:25] Peer 1004 has downloaded the piece 63 from Peer 1001. Now the number of pieces it has is 46.
+[2025/12/03 18:41:25] Peer 1004 sent the 'have' message to Peer 1001 for the piece 63.
+[2025/12/03 18:41:25] Peer 1004 sent 'request' for piece 64 to Peer 1001.
+[2025/12/03 18:41:25] Peer 1004 has downloaded the piece 64 from Peer 1001. Now the number of pieces it has is 47.
+[2025/12/03 18:41:25] Peer 1004 sent the 'have' message to Peer 1001 for the piece 64.
+[2025/12/03 18:41:25] Peer 1004 sent 'request' for piece 65 to Peer 1001.
+[2025/12/03 18:41:25] Peer 1004 has downloaded the piece 65 from Peer 1001. Now the number of pieces it has is 48.
+[2025/12/03 18:41:25] Peer 1004 sent the 'have' message to Peer 1001 for the piece 65.
+[2025/12/03 18:41:25] Peer 1004 sent 'request' for piece 66 to Peer 1001.
+[2025/12/03 18:41:25] Peer 1004 has downloaded the piece 66 from Peer 1001. Now the number of pieces it has is 49.
+[2025/12/03 18:41:25] Peer 1004 sent the 'have' message to Peer 1001 for the piece 66.
+[2025/12/03 18:41:25] Peer 1004 sent 'request' for piece 67 to Peer 1001.
+[2025/12/03 18:41:25] Peer 1004 has downloaded the piece 67 from Peer 1001. Now the number of pieces it has is 50.
+[2025/12/03 18:41:25] Peer 1004 sent the 'have' message to Peer 1001 for the piece 67.
+[2025/12/03 18:41:25] Peer 1004 sent 'request' for piece 68 to Peer 1001.
+[2025/12/03 18:41:25] Peer 1004 has downloaded the piece 68 from Peer 1001. Now the number of pieces it has is 51.
+[2025/12/03 18:41:25] Peer 1004 sent the 'have' message to Peer 1001 for the piece 68.
+[2025/12/03 18:41:25] Peer 1004 sent 'request' for piece 69 to Peer 1001.
+[2025/12/03 18:41:25] Peer 1004 has downloaded the piece 69 from Peer 1001. Now the number of pieces it has is 52.
+[2025/12/03 18:41:25] Peer 1004 sent the 'have' message to Peer 1001 for the piece 69.
+[2025/12/03 18:41:25] Peer 1004 sent 'request' for piece 70 to Peer 1001.
+[2025/12/03 18:41:25] Peer 1004 has downloaded the piece 70 from Peer 1001. Now the number of pieces it has is 53.
+[2025/12/03 18:41:25] Peer 1004 sent the 'have' message to Peer 1001 for the piece 70.
+[2025/12/03 18:41:25] Peer 1004 sent 'request' for piece 71 to Peer 1001.
+[2025/12/03 18:41:25] Peer 1004 has downloaded the piece 71 from Peer 1001. Now the number of pieces it has is 54.
+[2025/12/03 18:41:25] Peer 1004 sent the 'have' message to Peer 1001 for the piece 71.
+[2025/12/03 18:41:25] Peer 1004 sent 'request' for piece 72 to Peer 1001.
+[2025/12/03 18:41:25] Peer 1004 has downloaded the piece 72 from Peer 1001. Now the number of pieces it has is 55.
+[2025/12/03 18:41:25] Peer 1004 sent the 'have' message to Peer 1001 for the piece 72.
+[2025/12/03 18:41:25] Peer 1004 sent 'request' for piece 73 to Peer 1001.
+[2025/12/03 18:41:25] Peer 1004 has downloaded the piece 73 from Peer 1001. Now the number of pieces it has is 56.
+[2025/12/03 18:41:25] Peer 1004 sent the 'have' message to Peer 1001 for the piece 73.
+[2025/12/03 18:41:25] Peer 1004 sent 'request' for piece 74 to Peer 1001.
+[2025/12/03 18:41:25] Peer 1004 has downloaded the piece 74 from Peer 1001. Now the number of pieces it has is 57.
+[2025/12/03 18:41:25] Peer 1004 sent the 'have' message to Peer 1001 for the piece 74.
+[2025/12/03 18:41:25] Peer 1004 sent 'request' for piece 75 to Peer 1001.
+[2025/12/03 18:41:26] Peer 1004 has downloaded the piece 75 from Peer 1001. Now the number of pieces it has is 58.
+[2025/12/03 18:41:26] Peer 1004 sent the 'have' message to Peer 1001 for the piece 75.
+[2025/12/03 18:41:26] Peer 1004 sent 'request' for piece 76 to Peer 1001.
+[2025/12/03 18:41:26] Peer 1004 has downloaded the piece 76 from Peer 1001. Now the number of pieces it has is 59.
+[2025/12/03 18:41:26] Peer 1004 sent the 'have' message to Peer 1001 for the piece 76.
+[2025/12/03 18:41:26] Peer 1004 sent 'request' for piece 77 to Peer 1001.
+[2025/12/03 18:41:26] Peer 1004 has downloaded the piece 77 from Peer 1001. Now the number of pieces it has is 60.
+[2025/12/03 18:41:26] Peer 1004 sent the 'have' message to Peer 1001 for the piece 77.
+[2025/12/03 18:41:26] Peer 1004 sent 'request' for piece 78 to Peer 1001.
+[2025/12/03 18:41:26] Peer 1004 has downloaded the piece 78 from Peer 1001. Now the number of pieces it has is 61.
+[2025/12/03 18:41:26] Peer 1004 sent the 'have' message to Peer 1001 for the piece 78.
+[2025/12/03 18:41:26] Peer 1004 sent 'request' for piece 79 to Peer 1001.
+[2025/12/03 18:41:26] Peer 1004 has downloaded the piece 79 from Peer 1001. Now the number of pieces it has is 62.
+[2025/12/03 18:41:26] Peer 1004 sent the 'have' message to Peer 1001 for the piece 79.
+[2025/12/03 18:41:26] Peer 1004 sent 'request' for piece 80 to Peer 1001.
+[2025/12/03 18:41:26] Peer 1004 has downloaded the piece 80 from Peer 1001. Now the number of pieces it has is 63.
+[2025/12/03 18:41:26] Peer 1004 sent the 'have' message to Peer 1001 for the piece 80.
+[2025/12/03 18:41:26] Peer 1004 sent 'request' for piece 81 to Peer 1001.
+[2025/12/03 18:41:26] Peer 1004 has downloaded the piece 81 from Peer 1001. Now the number of pieces it has is 64.
+[2025/12/03 18:41:26] Peer 1004 sent the 'have' message to Peer 1001 for the piece 81.
+[2025/12/03 18:41:26] Peer 1004 sent 'request' for piece 82 to Peer 1001.
+[2025/12/03 18:41:26] Peer 1004 has downloaded the piece 82 from Peer 1001. Now the number of pieces it has is 65.
+[2025/12/03 18:41:26] Peer 1004 sent the 'have' message to Peer 1001 for the piece 82.
+[2025/12/03 18:41:26] Peer 1004 sent 'request' for piece 83 to Peer 1001.
+[2025/12/03 18:41:26] Peer 1004 has downloaded the piece 83 from Peer 1001. Now the number of pieces it has is 66.
+[2025/12/03 18:41:26] Peer 1004 sent the 'have' message to Peer 1001 for the piece 83.
+[2025/12/03 18:41:26] Peer 1004 sent 'request' for piece 84 to Peer 1001.
+[2025/12/03 18:41:26] Peer 1004 has downloaded the piece 84 from Peer 1001. Now the number of pieces it has is 67.
+[2025/12/03 18:41:26] Peer 1004 sent the 'have' message to Peer 1001 for the piece 84.
+[2025/12/03 18:41:26] Peer 1004 sent 'request' for piece 85 to Peer 1001.
+[2025/12/03 18:41:26] Peer 1004 has downloaded the piece 85 from Peer 1001. Now the number of pieces it has is 68.
+[2025/12/03 18:41:26] Peer 1004 sent the 'have' message to Peer 1001 for the piece 85.
+[2025/12/03 18:41:26] Peer 1004 sent 'request' for piece 86 to Peer 1001.
+[2025/12/03 18:41:26] Peer 1004 has downloaded the piece 86 from Peer 1001. Now the number of pieces it has is 69.
+[2025/12/03 18:41:26] Peer 1004 sent the 'have' message to Peer 1001 for the piece 86.
+[2025/12/03 18:41:26] Peer 1004 sent 'request' for piece 87 to Peer 1001.
+[2025/12/03 18:41:26] Peer 1004 has downloaded the piece 87 from Peer 1001. Now the number of pieces it has is 70.
+[2025/12/03 18:41:26] Peer 1004 sent the 'have' message to Peer 1001 for the piece 87.
+[2025/12/03 18:41:26] Peer 1004 sent 'request' for piece 88 to Peer 1001.
+[2025/12/03 18:41:26] Peer 1004 has downloaded the piece 88 from Peer 1001. Now the number of pieces it has is 71.
+[2025/12/03 18:41:26] Peer 1004 sent the 'have' message to Peer 1001 for the piece 88.
+[2025/12/03 18:41:26] Peer 1004 sent 'request' for piece 89 to Peer 1001.
+[2025/12/03 18:41:26] Peer 1004 has downloaded the piece 89 from Peer 1001. Now the number of pieces it has is 72.
+[2025/12/03 18:41:26] Peer 1004 sent the 'have' message to Peer 1001 for the piece 89.
+[2025/12/03 18:41:26] Peer 1004 sent 'request' for piece 90 to Peer 1001.
+[2025/12/03 18:41:27] Peer 1004 has downloaded the piece 90 from Peer 1001. Now the number of pieces it has is 73.
+[2025/12/03 18:41:27] Peer 1004 sent the 'have' message to Peer 1001 for the piece 90.
+[2025/12/03 18:41:27] Peer 1004 sent 'request' for piece 91 to Peer 1001.
+[2025/12/03 18:41:27] Peer 1004 has downloaded the piece 91 from Peer 1001. Now the number of pieces it has is 74.
+[2025/12/03 18:41:27] Peer 1004 sent the 'have' message to Peer 1001 for the piece 91.
+[2025/12/03 18:41:27] Peer 1004 sent 'request' for piece 92 to Peer 1001.
+[2025/12/03 18:41:27] Peer 1004 has downloaded the piece 92 from Peer 1001. Now the number of pieces it has is 75.
+[2025/12/03 18:41:27] Peer 1004 sent the 'have' message to Peer 1001 for the piece 92.
+[2025/12/03 18:41:27] Peer 1004 sent 'request' for piece 93 to Peer 1001.
+[2025/12/03 18:41:27] Peer 1004 has downloaded the piece 93 from Peer 1001. Now the number of pieces it has is 76.
+[2025/12/03 18:41:27] Peer 1004 sent the 'have' message to Peer 1001 for the piece 93.
+[2025/12/03 18:41:27] Peer 1004 sent 'request' for piece 94 to Peer 1001.
+[2025/12/03 18:41:27] Peer 1004 has downloaded the piece 94 from Peer 1001. Now the number of pieces it has is 77.
+[2025/12/03 18:41:27] Peer 1004 sent the 'have' message to Peer 1001 for the piece 94.
+[2025/12/03 18:41:27] Peer 1004 sent 'request' for piece 95 to Peer 1001.
+[2025/12/03 18:41:27] Peer 1004 has downloaded the piece 95 from Peer 1001. Now the number of pieces it has is 78.
+[2025/12/03 18:41:27] Peer 1004 sent the 'have' message to Peer 1001 for the piece 95.
+[2025/12/03 18:41:27] Peer 1004 sent 'request' for piece 96 to Peer 1001.
+[2025/12/03 18:41:27] Peer 1004 has downloaded the piece 96 from Peer 1001. Now the number of pieces it has is 79.
+[2025/12/03 18:41:27] Peer 1004 sent the 'have' message to Peer 1001 for the piece 96.
+[2025/12/03 18:41:27] Peer 1004 sent 'request' for piece 97 to Peer 1001.
+[2025/12/03 18:41:27] Peer 1004 has downloaded the piece 97 from Peer 1001. Now the number of pieces it has is 80.
+[2025/12/03 18:41:27] Peer 1004 sent the 'have' message to Peer 1001 for the piece 97.
+[2025/12/03 18:41:27] Peer 1004 sent 'request' for piece 98 to Peer 1001.
+[2025/12/03 18:41:27] Peer 1004 has downloaded the piece 98 from Peer 1001. Now the number of pieces it has is 81.
+[2025/12/03 18:41:27] Peer 1004 sent the 'have' message to Peer 1001 for the piece 98.
+[2025/12/03 18:41:27] Peer 1004 sent 'request' for piece 99 to Peer 1001.
+[2025/12/03 18:41:27] Peer 1004 has downloaded the piece 99 from Peer 1001. Now the number of pieces it has is 82.
+[2025/12/03 18:41:27] Peer 1004 sent the 'have' message to Peer 1001 for the piece 99.
+[2025/12/03 18:41:27] Peer 1004 sent 'request' for piece 100 to Peer 1001.
+[2025/12/03 18:41:27] Peer 1004 has downloaded the piece 100 from Peer 1001. Now the number of pieces it has is 83.
+[2025/12/03 18:41:27] Peer 1004 sent the 'have' message to Peer 1001 for the piece 100.
+[2025/12/03 18:41:27] Peer 1004 sent 'request' for piece 101 to Peer 1001.
+[2025/12/03 18:41:27] Peer 1004 has downloaded the piece 101 from Peer 1001. Now the number of pieces it has is 84.
+[2025/12/03 18:41:27] Peer 1004 sent the 'have' message to Peer 1001 for the piece 101.
+[2025/12/03 18:41:27] Peer 1004 sent 'request' for piece 102 to Peer 1001.
+[2025/12/03 18:41:27] Peer 1004 has downloaded the piece 102 from Peer 1001. Now the number of pieces it has is 85.
+[2025/12/03 18:41:27] Peer 1004 sent the 'have' message to Peer 1001 for the piece 102.
+[2025/12/03 18:41:27] Peer 1004 sent 'request' for piece 103 to Peer 1001.
+[2025/12/03 18:41:27] Peer 1004 has downloaded the piece 103 from Peer 1001. Now the number of pieces it has is 86.
+[2025/12/03 18:41:27] Peer 1004 sent the 'have' message to Peer 1001 for the piece 103.
+[2025/12/03 18:41:27] Peer 1004 sent 'request' for piece 104 to Peer 1001.
+[2025/12/03 18:41:27] Peer 1004 has downloaded the piece 104 from Peer 1001. Now the number of pieces it has is 87.
+[2025/12/03 18:41:27] Peer 1004 sent the 'have' message to Peer 1001 for the piece 104.
+[2025/12/03 18:41:27] Peer 1004 sent 'request' for piece 105 to Peer 1001.
+[2025/12/03 18:41:27] Peer 1004 has downloaded the piece 105 from Peer 1001. Now the number of pieces it has is 88.
+[2025/12/03 18:41:27] Peer 1004 sent the 'have' message to Peer 1001 for the piece 105.
+[2025/12/03 18:41:28] Peer 1004 sent 'request' for piece 106 to Peer 1001.
+[2025/12/03 18:41:28] Peer 1004 has downloaded the piece 106 from Peer 1001. Now the number of pieces it has is 89.
+[2025/12/03 18:41:28] Peer 1004 sent the 'have' message to Peer 1001 for the piece 106.
+[2025/12/03 18:41:28] Peer 1004 sent 'request' for piece 107 to Peer 1001.
+[2025/12/03 18:41:28] Peer 1004 has downloaded the piece 107 from Peer 1001. Now the number of pieces it has is 90.
+[2025/12/03 18:41:28] Peer 1004 sent the 'have' message to Peer 1001 for the piece 107.
+[2025/12/03 18:41:28] Peer 1004 sent 'request' for piece 108 to Peer 1001.
+[2025/12/03 18:41:28] Peer 1004 has downloaded the piece 108 from Peer 1001. Now the number of pieces it has is 91.
+[2025/12/03 18:41:28] Peer 1004 sent the 'have' message to Peer 1001 for the piece 108.
+[2025/12/03 18:41:28] Peer 1004 sent 'request' for piece 109 to Peer 1001.
+[2025/12/03 18:41:28] Peer 1004 has downloaded the piece 109 from Peer 1001. Now the number of pieces it has is 92.
+[2025/12/03 18:41:28] Peer 1004 sent the 'have' message to Peer 1001 for the piece 109.
+[2025/12/03 18:41:28] Peer 1004 sent 'request' for piece 110 to Peer 1001.
+[2025/12/03 18:41:28] Peer 1004 has downloaded the piece 110 from Peer 1001. Now the number of pieces it has is 93.
+[2025/12/03 18:41:28] Peer 1004 sent the 'have' message to Peer 1001 for the piece 110.
+[2025/12/03 18:41:28] Peer 1004 sent 'request' for piece 111 to Peer 1001.
+[2025/12/03 18:41:28] Peer 1004 has downloaded the piece 111 from Peer 1001. Now the number of pieces it has is 94.
+[2025/12/03 18:41:28] Peer 1004 sent the 'have' message to Peer 1001 for the piece 111.
+[2025/12/03 18:41:28] Peer 1004 sent 'request' for piece 112 to Peer 1001.
+[2025/12/03 18:41:28] Peer 1004 has downloaded the piece 112 from Peer 1001. Now the number of pieces it has is 95.
+[2025/12/03 18:41:28] Peer 1004 sent the 'have' message to Peer 1001 for the piece 112.
+[2025/12/03 18:41:28] Peer 1004 sent 'request' for piece 113 to Peer 1001.
+[2025/12/03 18:41:28] Peer 1004 has downloaded the piece 113 from Peer 1001. Now the number of pieces it has is 96.
+[2025/12/03 18:41:28] Peer 1004 sent the 'have' message to Peer 1001 for the piece 113.
+[2025/12/03 18:41:28] Peer 1004 sent 'request' for piece 114 to Peer 1001.
+[2025/12/03 18:41:28] Peer 1004 has downloaded the piece 114 from Peer 1001. Now the number of pieces it has is 97.
+[2025/12/03 18:41:28] Peer 1004 sent the 'have' message to Peer 1001 for the piece 114.
+[2025/12/03 18:41:28] Peer 1004 sent 'request' for piece 115 to Peer 1001.
+[2025/12/03 18:41:28] Peer 1004 has downloaded the piece 115 from Peer 1001. Now the number of pieces it has is 98.
+[2025/12/03 18:41:28] Peer 1004 sent the 'have' message to Peer 1001 for the piece 115.
+[2025/12/03 18:41:28] Peer 1004 sent 'request' for piece 116 to Peer 1001.
+[2025/12/03 18:41:28] Peer 1004 has downloaded the piece 116 from Peer 1001. Now the number of pieces it has is 99.
+[2025/12/03 18:41:28] Peer 1004 sent the 'have' message to Peer 1001 for the piece 116.
+[2025/12/03 18:41:28] Peer 1004 sent 'request' for piece 117 to Peer 1001.
+[2025/12/03 18:41:28] Peer 1004 has downloaded the piece 117 from Peer 1001. Now the number of pieces it has is 100.
+[2025/12/03 18:41:28] Peer 1004 sent the 'have' message to Peer 1001 for the piece 117.
+[2025/12/03 18:41:28] Peer 1004 sent 'request' for piece 118 to Peer 1001.
+[2025/12/03 18:41:28] Peer 1004 has downloaded the piece 118 from Peer 1001. Now the number of pieces it has is 101.
+[2025/12/03 18:41:28] Peer 1004 sent the 'have' message to Peer 1001 for the piece 118.
+[2025/12/03 18:41:28] Peer 1004 sent 'request' for piece 119 to Peer 1001.
+[2025/12/03 18:41:29] Peer 1004 has downloaded the piece 119 from Peer 1001. Now the number of pieces it has is 102.
+[2025/12/03 18:41:29] Peer 1004 sent the 'have' message to Peer 1001 for the piece 119.
+[2025/12/03 18:41:29] Peer 1004 sent 'request' for piece 120 to Peer 1001.
+[2025/12/03 18:41:29] Peer 1004 has downloaded the piece 120 from Peer 1001. Now the number of pieces it has is 103.
+[2025/12/03 18:41:29] Peer 1004 sent the 'have' message to Peer 1001 for the piece 120.
+[2025/12/03 18:41:29] Peer 1004 sent 'request' for piece 121 to Peer 1001.
+[2025/12/03 18:41:29] Peer 1004 has downloaded the piece 121 from Peer 1001. Now the number of pieces it has is 104.
+[2025/12/03 18:41:29] Peer 1004 sent the 'have' message to Peer 1001 for the piece 121.
+[2025/12/03 18:41:29] Peer 1004 sent 'request' for piece 122 to Peer 1001.
+[2025/12/03 18:41:29] Peer 1004 has downloaded the piece 122 from Peer 1001. Now the number of pieces it has is 105.
+[2025/12/03 18:41:29] Peer 1004 sent the 'have' message to Peer 1001 for the piece 122.
+[2025/12/03 18:41:29] Peer 1004 sent 'request' for piece 123 to Peer 1001.
+[2025/12/03 18:41:29] Peer 1004 sends a handshake to Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 makes a connection to Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 received a handshake from Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 sends a bitfield to Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 received a bitfield from Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 has downloaded the piece 123 from Peer 1001. Now the number of pieces it has is 106.
+[2025/12/03 18:41:29] Peer 1004 sent the 'have' message to Peer 1001 for the piece 123.
+[2025/12/03 18:41:29] Peer 1004 sent 'request' for piece 124 to Peer 1001.
+[2025/12/03 18:41:29] Peer 1004 has downloaded the piece 124 from Peer 1001. Now the number of pieces it has is 107.
+[2025/12/03 18:41:29] Peer 1004 sent the 'have' message to Peer 1001 for the piece 124.
+[2025/12/03 18:41:29] Peer 1004 sent 'request' for piece 125 to Peer 1001.
+[2025/12/03 18:41:29] Peer 1004 received the 'interested' message from Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 has downloaded the piece 125 from Peer 1001. Now the number of pieces it has is 108.
+[2025/12/03 18:41:29] Peer 1004 sent the 'have' message to Peer 1001 for the piece 125.
+[2025/12/03 18:41:29] Peer 1004 sent 'request' for piece 126 to Peer 1001.
+[2025/12/03 18:41:29] Peer 1004 is choked by Peer 1001.
+[2025/12/03 18:41:29] Peer 1004 sent 'piece' message for piece 66 to Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 sent 'piece' message for piece 71 to Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 sent 'piece' message for piece 72 to Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 sent 'piece' message for piece 73 to Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 sent 'piece' message for piece 75 to Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 received the 'have' message from Peer 1003 for the piece 75.
+[2025/12/03 18:41:29] Peer 1004 updated its view of Peer 1003's bitfield: fffffffffffffff000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:29] Peer 1004 sent 'piece' message for piece 76 to Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 sent 'piece' message for piece 78 to Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 sent 'piece' message for piece 79 to Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 sent 'piece' message for piece 80 to Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 sent 'piece' message for piece 85 to Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 sent 'piece' message for piece 86 to Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 sent 'piece' message for piece 87 to Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 received the 'have' message from Peer 1003 for the piece 87.
+[2025/12/03 18:41:29] Peer 1004 updated its view of Peer 1003's bitfield: fffffffffffffff000100100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:29] Peer 1004 sent 'piece' message for piece 88 to Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 sent 'piece' message for piece 89 to Peer 1003.
+[2025/12/03 18:41:29] Peer 1004 received the 'have' message from Peer 1003 for the piece 89.
+[2025/12/03 18:41:29] Peer 1004 updated its view of Peer 1003's bitfield: fffffffffffffff000100140000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 90 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 91 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 92 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 93 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 95 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 96 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 98 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 100 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 101 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 102 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 105 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 106 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 107 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 108 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 109 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 received the 'have' message from Peer 1003 for the piece 109.
+[2025/12/03 18:41:30] Peer 1004 updated its view of Peer 1003's bitfield: fffffffffffffff000100140000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 110 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 113 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 114 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 received the 'have' message from Peer 1003 for the piece 114.
+[2025/12/03 18:41:30] Peer 1004 updated its view of Peer 1003's bitfield: fffffffffffffff000100140000420000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 115 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 118 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 119 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 120 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 121 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 received the 'have' message from Peer 1003 for the piece 121.
+[2025/12/03 18:41:30] Peer 1004 updated its view of Peer 1003's bitfield: fffffffffffffff000100140000420400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:30] Peer 1004 sent 'piece' message for piece 122 to Peer 1003.
+[2025/12/03 18:41:30] Peer 1004 received the 'not interested' message from Peer 1003.
+[2025/12/03 18:41:32] Peer 1004 is connected from Peer 1005.
+[2025/12/03 18:41:32] Peer 1004 received a handshake from Peer 1005.
+[2025/12/03 18:41:32] Peer 1004 sends a handshake to Peer 1005.
+[2025/12/03 18:41:32] Peer 1004 sends a bitfield to Peer 1005.
+[2025/12/03 18:41:32] Peer 1004 received a bitfield from Peer 1005.
+[2025/12/03 18:41:32] Peer 1004 received the 'interested' message from Peer 1005.
+[2025/12/03 18:41:32] Peer 1004 sent 'piece' message for piece 0 to Peer 1005.
+[2025/12/03 18:41:32] Peer 1004 received the 'have' message from Peer 1005 for the piece 0.
+[2025/12/03 18:41:32] Peer 1004 updated its view of Peer 1005's bitfield: 800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:32] Peer 1004 sent 'piece' message for piece 1 to Peer 1005.
+[2025/12/03 18:41:32] Peer 1004 received the 'have' message from Peer 1005 for the piece 1.
+[2025/12/03 18:41:32] Peer 1004 updated its view of Peer 1005's bitfield: c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:32] Peer 1004 sent 'piece' message for piece 2 to Peer 1005.
+[2025/12/03 18:41:32] Peer 1004 received the 'have' message from Peer 1005 for the piece 2.
+[2025/12/03 18:41:32] Peer 1004 updated its view of Peer 1005's bitfield: e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:32] Peer 1004 sent 'piece' message for piece 3 to Peer 1005.
+[2025/12/03 18:41:32] Peer 1004 received the 'have' message from Peer 1005 for the piece 3.
+[2025/12/03 18:41:32] Peer 1004 updated its view of Peer 1005's bitfield: f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:32] Peer 1004 sent 'piece' message for piece 4 to Peer 1005.
+[2025/12/03 18:41:32] Peer 1004 received the 'have' message from Peer 1005 for the piece 4.
+[2025/12/03 18:41:32] Peer 1004 updated its view of Peer 1005's bitfield: f80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:32] Peer 1004 sent 'piece' message for piece 5 to Peer 1005.
+[2025/12/03 18:41:32] Peer 1004 received the 'have' message from Peer 1005 for the piece 5.
+[2025/12/03 18:41:32] Peer 1004 updated its view of Peer 1005's bitfield: fc0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:32] Peer 1004 sent 'piece' message for piece 6 to Peer 1005.
+[2025/12/03 18:41:32] Peer 1004 sent 'piece' message for piece 7 to Peer 1005.
+[2025/12/03 18:41:32] Peer 1004 received the 'have' message from Peer 1005 for the piece 7.
+[2025/12/03 18:41:32] Peer 1004 updated its view of Peer 1005's bitfield: fd0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:32] Peer 1004 sent 'piece' message for piece 8 to Peer 1005.
+[2025/12/03 18:41:32] Peer 1004 received the 'have' message from Peer 1005 for the piece 8.
+[2025/12/03 18:41:32] Peer 1004 updated its view of Peer 1005's bitfield: fd8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:32] Peer 1004 sent 'piece' message for piece 9 to Peer 1005.
+[2025/12/03 18:41:32] Peer 1004 received the 'have' message from Peer 1005 for the piece 9.
+[2025/12/03 18:41:32] Peer 1004 updated its view of Peer 1005's bitfield: fdc000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:32] Peer 1004 sent 'piece' message for piece 10 to Peer 1005.
+[2025/12/03 18:41:32] Peer 1004 received the 'have' message from Peer 1005 for the piece 10.
+[2025/12/03 18:41:32] Peer 1004 updated its view of Peer 1005's bitfield: fde000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:32] Peer 1004 sent 'piece' message for piece 11 to Peer 1005.
+[2025/12/03 18:41:32] Peer 1004 received the 'have' message from Peer 1005 for the piece 11.
+[2025/12/03 18:41:32] Peer 1004 updated its view of Peer 1005's bitfield: fdf000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:32] Peer 1004 sent 'piece' message for piece 12 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 13 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 13.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 14 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 14.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 15 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 15.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 16 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 16.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf780000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 18 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 18.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 19 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 19.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 20 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 20.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7b8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 21 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 21.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bc000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 22 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 22.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7be000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 23 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 23.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 24 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 25 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 25.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 26 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 26.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 27 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 27.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 28 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 28.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf780000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 29 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 29.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 30 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 30.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 31 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 31.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7f0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 32 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 32.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7f8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 33 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 33.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7fc000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 34 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 34.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7fe000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 35 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 35.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 36 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 36.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ff800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 37 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 37.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 38 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 38.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffe00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 39 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 39.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7fff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 40 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 40.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7fff80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 41 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 41.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7fffc0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 42 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 42.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7fffe0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 43 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 43.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffff0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 44 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 44.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffff8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 45 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 45.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffc000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 46 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 46.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffe000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 47 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 48 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 48.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffe800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 49 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 49.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffec00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 50 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 50.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffee00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 51 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 51.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffef00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 52 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 52.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffef80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 53 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 54 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 54.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefa0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 55 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 55.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefb0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 56 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 56.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefb8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 57 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 57.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbc000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 58 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 58.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbe000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 59 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 59.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbf000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 60 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 60.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbf800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 61 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 61.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 62 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 62.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfe00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 63 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 63.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 64 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 64.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbff80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 65 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 65.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbffc0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 66 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 66.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbffe0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 67 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 67.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfff0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 68 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 68.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfff8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 69 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 70 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 70.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffa000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 71 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 71.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 72 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 73 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 73.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 74 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 74.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 75 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 75.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 76 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 76.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb780000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 77 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 77.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 78 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 78.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 79 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 79.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7f0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 80 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 80.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7f8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 81 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 81.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7fc000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 82 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 82.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7fe000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 83 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 83.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 84 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 84.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ff800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 85 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 86 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 86.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffa00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 87 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 87.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 88 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 88.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffb80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 89 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 89.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbc0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 90 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 90.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbe0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 91 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 91.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbf0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 92 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 92.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbf8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 93 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 94 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 94.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfa000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 95 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 95.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfb000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 96 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 96.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfb800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 97 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 97.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 98 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 98.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbe00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 99 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 99.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbf00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 100 to Peer 1005.
+[2025/12/03 18:41:33] Peer 1004 received the 'have' message from Peer 1005 for the piece 100.
+[2025/12/03 18:41:33] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbf80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:33] Peer 1004 sent 'piece' message for piece 101 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 102 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 102.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfa0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 103 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 103.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfb0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 104 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 104.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfb8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 105 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 105.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbc000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 106 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 106.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbe000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 107 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 107.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbf000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 108 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 108.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbf800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 109 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 109.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbfc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 110 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 110.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbfe00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 111 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 111.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 112 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 112.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbff80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 113 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 113.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbffc0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 114 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 114.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbffe0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 115 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 115.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbfff0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 116 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 116.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbfff8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 117 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 117.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbfffc000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 118 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 118.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbfffe000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 119 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 120 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 120.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbfffe800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 121 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 121.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbfffec00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 122 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 123 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 123.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbfffed00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 124 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 124.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbfffed80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 sent 'piece' message for piece 125 to Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 received the 'have' message from Peer 1005 for the piece 125.
+[2025/12/03 18:41:34] Peer 1004 updated its view of Peer 1005's bitfield: fdf7bf7ffffefbfffb7ffbfbfbfffedc0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:34] Peer 1004 received the 'not interested' message from Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 chokes Peer 1001.
+[2025/12/03 18:41:34] Peer 1004 chokes Peer 1002.
+[2025/12/03 18:41:34] Peer 1004 chokes Peer 1003.
+[2025/12/03 18:41:34] Peer 1004 chokes Peer 1005.
+[2025/12/03 18:41:34] Peer 1004 has the preferred neighbors [].
+[2025/12/03 18:41:35] Peer 1004 is connected from Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received a handshake from Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sends a handshake to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sends a bitfield to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received a bitfield from Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'interested' message from Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 0 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 0.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: 800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 1 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 2 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 2.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 3 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 4 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 4.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: a80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 5 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 5.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ac0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 6 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 7 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 7.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 8 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 9 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 9.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 10 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 11 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 11.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 12 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 13 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 13.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad5400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 14 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 15 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 15.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad5500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 16 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 17 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 17.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad5540000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 18 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 19 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 19.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad5550000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 20 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 21 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 21.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad5554000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 22 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 23 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 23.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad5555000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 24 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 25 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 25.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad5555400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 26 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 27 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 27.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad5555500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 28 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 28.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad5555580000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 29 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 30 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 30.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 31 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 31.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 32 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 33 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 33.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 34 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 35 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 35.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 36 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 37 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 37.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b5400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 38 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 39 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 39.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b5500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 40 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 40.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b5580000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 41 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 42 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 42.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 43 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 44 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 44.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55a8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 45 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 46 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 46.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aa000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 47 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 48 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 48.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aa800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 49 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 50 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 50.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaa00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 51 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 52 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 52.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaa80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 53 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 53.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaac0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 54 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 55 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 55.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 56 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 57 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 57.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 58 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 59 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 59.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 60 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 60.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 61 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 62 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 62.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 63 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 63.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 64 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 sent 'piece' message for piece 65 to Peer 1006.
+[2025/12/03 18:41:35] Peer 1004 received the 'have' message from Peer 1006 for the piece 65.
+[2025/12/03 18:41:35] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 66 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 67 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 67.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 68 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 69 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 69.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b54000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 70 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 71 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 71.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 72 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 73 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 73.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 74 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 75 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 75.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 76 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 77 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 77.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55540000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 78 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 79 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 79.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55550000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 80 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 81 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 81.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55554000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 82 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 82.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 83 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 84 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 84.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 85 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 86 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 86.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 87 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 88 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 88.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556a80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 89 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 89.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ac0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 90 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 91 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 91.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 92 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 93 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 93.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 94 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 95 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 95.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 96 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 96.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad5800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 97 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 98 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 98.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad5a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 99 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 100 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 100.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad5a80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 101 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 102 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 102.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad5aa0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 103 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 104 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 104.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad5aa8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 105 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 105.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad5aac000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 106 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 107 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 107.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad5aad000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 108 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 109 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 110 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 110.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad5aad200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 111 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 111.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad5aad300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 112 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 113 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 113.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad5aad340000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 114 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 115 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 115.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad5aad350000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 116 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 117 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 117.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad5aad354000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 118 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 118.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad5aad356000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 119 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 120 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 120.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad5aad356800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 121 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 121.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad5aad356c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 122 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 123 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 124 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 124.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad5aad356c80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 sent 'piece' message for piece 125 to Peer 1006.
+[2025/12/03 18:41:36] Peer 1004 received the 'have' message from Peer 1006 for the piece 125.
+[2025/12/03 18:41:36] Peer 1004 updated its view of Peer 1006's bitfield: ad55555b55aaad5b55556ad5aad356cc0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+[2025/12/03 18:41:36] Peer 1004 received the 'not interested' message from Peer 1006.
+[2025/12/03 18:41:39] Peer 1004 chokes Peer 1006.
+[2025/12/03 18:41:39] Peer 1004 has the preferred neighbors [].
+[2025/12/03 18:41:44] Peer 1004 has the preferred neighbors [].
+[2025/12/03 18:41:49] Peer 1004 has the preferred neighbors [].
+[2025/12/03 18:41:54] Peer 1004 has the preferred neighbors [].
+[2025/12/03 18:41:59] Peer 1004 has the preferred neighbors [].
+[2025/12/03 18:42:04] Peer 1004 has the preferred neighbors [].
+[2025/12/03 18:42:09] Peer 1004 has the preferred neighbors [].
+[2025/12/03 18:42:14] Peer 1004 has the preferred neighbors [].
+[2025/12/03 18:42:19] Peer 1004 has the preferred neighbors [].
