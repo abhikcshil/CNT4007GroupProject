@@ -276,6 +276,7 @@ def preferred_unchoke_loop(
                 elif pid != optimistic_id:  # don't choke optimistic neighbor
                     conn.choke()
 
+        current_preferred = selected_ids
         logger.change_preferred_neighbors(me_id, sorted(selected_ids))
 
 
