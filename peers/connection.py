@@ -145,7 +145,8 @@ class PeerConnection(threading.Thread):
             self.am_choked = True
             if self.logger:
                 self.logger.choked_by(self.me_id, self.remote_id)
-            # when choked we stop sending new requests
+            # when choked we stop sending new requests and clear pending requests
+            self.requested.clear()
             return
 
         if t == MessageType.UNCHOKE:
