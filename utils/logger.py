@@ -119,6 +119,12 @@ class Logger:
 
     def sent_have(self, peer1: int, peer2: int, piece_index: int):
         self._write(f"Peer {peer1} sent the 'have' message to Peer {peer2} for the piece {piece_index}.")
+    
+    def sent_interested(self, peer1: int, peer2: int):
+        self._write(f"Peer {peer1} sent the 'interested' message to Peer {peer2}.")
+
+    def sent_not_interested(self, peer1: int, peer2: int):
+        self._write(f"Peer {peer1} sent the 'not interested' message to Peer {peer2}.")
 
     # Message receipt
     def received_have(self, peer1: int, peer2: int, piece_index: int):

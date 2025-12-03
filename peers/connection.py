@@ -268,9 +268,11 @@ class PeerConnection(threading.Thread):
         if interesting and not self.am_interested:
             self.send_message(make_interested())
             self.am_interested = True
+            self.logger.sent_interested(self.me_id, self.remote_id)
         elif not interesting and self.am_interested:
             self.send_message(make_not_interested())
             self.am_interested = False
+            self.logger.sent_not_interested(self.me_id, self.remote_id)
 
     def _maybe_request_piece(self):
         if self.remote_bitfield is None:
