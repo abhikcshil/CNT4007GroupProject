@@ -56,8 +56,8 @@ class PeerConnection(threading.Thread):
 
         self.am_interested = False
         self.peer_interested = False
-        self.am_choked = False         # remote chokes me? start unchoked until first interval
-        self.peer_choked = True        # I choke remote? start choked
+        self.am_choked = False         # remote chokes me? start unchoked
+        self.peer_choked = False       # I choke remote? start unchoked
         self.remote_interested = False # remote is interested in me?
 
         self._interval_downloaded = 0  # bytes downloaded in current interval
