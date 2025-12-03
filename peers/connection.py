@@ -252,23 +252,19 @@ class PeerConnection(threading.Thread):
             # Broadcast have message to ALL neighbors
             if self.neighbors and self.neighbors_lock:
                 with self.neighbors_lock:
-                    for peer_id, conn in self.neighbors.items():
-                        try:
-                            conn.send_message(make_have(piece_index))
-                            if self.logger:
-                                self.logger.sent_have(self.me_id, peer_id, piece_index)
-                        except Exception:
-                            pass
+                    neighbors_list = list(self.neighbors.items())
+                for peer_id, conn in neighbors_list:
+                    try:
+                        conn.send_message(make_have(piece_index))
+                        if self.logger:
+                            self.logger.sent_have(self.me_id, peer_id, piece_index)
+                    except Exception:
+                        pass
 
         if piece_index in self.requested:
             self.requested.remove(piece_index)
 
-        # Update interest for all connections
-        if self.neighbors and self.neighbors_lock:
-            with self.neighbors_lock:
-                for conn in self.neighbors.values():
-                    conn._update_interest()
-        
+        self._update_interest()
         self._maybe_request_piece()
 
 
