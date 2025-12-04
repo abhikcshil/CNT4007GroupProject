@@ -296,6 +296,10 @@ class PeerConnection(threading.Thread):
         if self.am_choked:
             return
 
+        # Request up to 5 pieces in pipeline to keep download going
+        max_pipeline = 5
+        requested_count = 0
+        
         for i in range(self.num_pieces):
             if (
                 self.remote_bitfield.has(i)
@@ -306,4 +310,6 @@ class PeerConnection(threading.Thread):
                     self.logger.request_piece(self.me_id, self.remote_id, i)
                 self.send_message(make_request(i))
                 self.requested.add(i)
-                break
+                requested_count += 1
+                if requested_count >= max_pipeline:
+                    break
