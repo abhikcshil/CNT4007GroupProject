@@ -1,257 +1,534 @@
-# P2P File Sharing System (CNT4007 / CNT5106C)
+# P2P File Sharing System - CNT4007
 
-This project implements a BitTorrent-like peer-to-peer (P2P) file sharing system.  
-Peers establish TCP connections, perform handshake and bitfield exchange, manage interest, perform choking/unchoking, exchange file pieces, and reconstruct the final file.
-
-The implementation fully follows the project description, grading policy, and logistics requirements.
-
----
-
-## 1. Group Information
-
-- **Course:** CNT4007 / CNT5106C  
-- **Semester:** Fall 2025  
-- **Programming Language:** Python 3.x  
-
-### **Group Members & Contributions**
-> (Fill in after you tell me your names 🐾)
-
-- **TODO: Name 1** — Networking (PeerConnection), message loop, request/piece handling  
-- **TODO: Name 2** — Choking/unchoking algorithm, optimistic unchoke scheduling  
-- **TODO: Name 3** — Bitfield, handshake, message encoding/decoding  
-- **TODO: Name 4** — Logger, peerProcess orchestration, README & demo  
-- **TODO: Name 5 (optional)** — Testing, config design, multi-host demo
-
-This section satisfies the *“who has done what”* part of the rubric.
+**Course:** CNT4007  
+**Semester:** Fall 2025  
+**Programming Language:** Python 3.x  
+**Due Date:** December 3, 2025, 11:59 PM
 
 ---
 
-## 2. Project Structure
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [Group Members & Contributions](#group-members--contributions)
+3. [System Requirements](#system-requirements)
+4. [Project Structure](#project-structure)
+5. [Configuration Files](#configuration-files)
+6. [Running the System](#running-the-system)
+7. [Grading Rubric Compliance](#grading-rubric-compliance)
+8. [Protocol Implementation Details](#protocol-implementation-details)
+9. [Logging](#logging)
+10. [Demo Video](#demo-video)
 
+---
+
+## Project Overview
+
+This project implements a **BitTorrent-like peer-to-peer (P2P) file sharing system** with the following features:
+
+- **TCP-based reliable communication** between peers
+- **32-byte handshake** protocol (`P2PFILESHARINGPROJ` + 10 zero bytes + 4-byte peer ID)
+- **8 message types**: choke (0), unchoke (1), interested (2), not interested (3), have (4), bitfield (5), request (6), piece (7)
+- **Choking/Unchoking algorithm**: k preferred neighbors selected every p seconds based on download rate
+- **Optimistic unchoking**: 1 random interested-but-choked neighbor selected every m seconds
+- **Random piece selection** strategy (NOT rarest-first)
+- **Single outstanding request** per connection (no pipelining)
+- **Complete file distribution** with automatic termination
+- **Comprehensive logging** of all protocol events
+
+---
+
+## Group Members & Contributions
+
+| Name | Contributions |
+|------|---------------|
+| **Weien Xu** | Led the implementation of complete file exchange functionality and message handling system. Designed and developed the entire `connection.py` module with all eight message type processors (choke, unchoke, interested, not interested, have, bitfield, request, piece), implementing state management for tracking remote peer interest and choke status. Built piece request/response mechanisms with pipeline management ensuring single outstanding requests per connection. Developed download rate tracking for preferred neighbor selection. Implemented dynamic interest management system based on bitfield changes. Created message encoding/decoding utilities in `message.py` with proper struct formatting. Architected threading model for per-connection message loops and contributed to protocol compliance verification. |
+| **Robby Sleiti** | Implemented the comprehensive `peerProcess.py` orchestration layer handling all peer lifecycle management. Developed configuration file parsing for Common.cfg and PeerInfo.cfg, peer folder initialization and verification, TCP socket server and client connection establishment with retry logic, complete handshake protocol implementation, bitfield exchange coordination, and the entire event logging system with specification-compliant timestamp formatting for all required log events. |
+| **Abhik Shil** | Implemented critical utility modules including the bitfield data structure with MSB-first bit encoding for accurate piece availability tracking, file splitting and merging operations for handling the complete file assembly, piece I/O management functions for reading and writing individual piece files, and various helper functions used throughout the codebase for file handling operations. |
+
+---
+
+## System Requirements
+
+### Software Dependencies
+- **Python 3.8+** (tested on Python 3.10)
+- Standard library modules only:
+  - `socket`, `threading`, `struct`, `os`, `time`, `random`, `math`, `pathlib`
+
+### Hardware Requirements
+- **File Size**: 24,301,474 bytes (~23.2 MB) - meets ≥20MB requirement
+- **Piece Size**: 16,384 bytes (16 KB) as required
+- **Number of Pieces**: 1,484 pieces
+- **Disk Space**: ~150MB+ per peer
+
+---
+
+## Project Structure
+
+```
 CNT4007GroupProject/
 │
-├── peerProcess.py # Main peer logic (startup, timers, termination)
+├── peerProcess.py              # Main peer entry point
+│
 ├── peers/
-│ └── connection.py # One thread per peer connection (message loop)
+│   ├── __init__.py
+│   └── connection.py           # Per-connection handler (message loop thread)
 │
 ├── utils/
-│ ├── handshake.py # 32-byte handshake
-│ ├── bitfield.py # Bitfield representation of pieces
-│ ├── message.py # Message encoding/decoding
-│ ├── constants.py # Message type enum (0–7)
-│ ├── logger.py # Log writer (spec-compliant)
-│ ├── file_manager.py # Split/merge/read/write pieces
-│ └── config_parser.py # Parse Common.cfg and PeerInfo.cfg
+│   ├── __init__.py
+│   ├── handshake.py            # 32-byte handshake encoding/decoding
+│   ├── bitfield.py             # Bitfield class (MSB-first encoding)
+│   ├── message.py              # Message encoding/decoding
+│   ├── constants.py            # MessageType enum (0-7)
+│   ├── logger.py               # Spec-compliant logging
+│   └── file_manager.py         # File splitting, piece I/O, merging
 │
-├── Common.cfg # Global settings
-├── PeerInfo.cfg # Peer configuration (ID, host, port, has file)
-└── log_peer_<id>.log # Logs for each peer
+├── Common.cfg                  # Global configuration
+├── PeerInfo.cfg                # Peer list (ID, host, port, hasFile)
+│
+├── peer_1001/                  # Working directory for peer 1001
+│   └── tree.jpg                # Complete file (if hasFile=1)
+│
+├── peer_1002/                  # Working directory for peer 1002
+│
+└── log_peer_1001.log           # Log file for peer 1001
+```
 
-yaml
-复制代码
+**Threading Model:**
+- 1 server thread (accepts incoming connections)
+- 1 thread per peer connection (bidirectional message exchange)
+- 1 preferred neighbor scheduler thread (fires every p seconds)
+- 1 optimistic unchoke scheduler thread (fires every m seconds)
 
 ---
 
-## 3. Configuration Files
+## Configuration Files
 
 ### Common.cfg
 
-Example (demo configuration):
-
-NumberOfPreferredNeighbors 2
+```
+NumberOfPreferredNeighbors 3
 UnchokingInterval 5
-OptimisticUnchokingInterval 15
-FileName TheFile.dat
+OptimisticUnchokingInterval 10
+FileName tree.jpg
 FileSize 24301474
 PieceSize 16384
+```
 
-csharp
-复制代码
-
-- Uses piece size **16384 bytes** as required by the demo logistics.
-- Demo file size ≥20MB as required by project logistics.
+**Parameters:**
+- `NumberOfPreferredNeighbors` (k=3): Number of preferred neighbors
+- `UnchokingInterval` (p=5): Seconds between preferred neighbor recalculations
+- `OptimisticUnchokingInterval` (m=10): Seconds between optimistic unchoke rotations
+- `FileName`: File being shared (tree.jpg)
+- `FileSize`: 24,301,474 bytes (~23.2 MB)
+- `PieceSize`: 16,384 bytes (required)
 
 ### PeerInfo.cfg
 
-Format:
-[peerID] [hostname] [port] [hasFile]
+```
+1001 192.168.0.58 16001 1
+1002 192.168.0.167 16002 0
+1003 192.168.0.167 16003 0
+1004 192.168.0.234 16004 0
+1005 192.168.0.234 16005 0
+1006 192.168.0.234 16006 0
+```
 
-makefile
-复制代码
+**Format:** `[peer_id] [hostname] [port] [has_file]`
 
-Example:
-1001 localhost 6008 1
-1002 localhost 6009 0
-1003 localhost 6010 0
-1004 localhost 6011 0
-1005 localhost 6012 0
-1006 localhost 6013 0
-
-yaml
-复制代码
-
-- Peers must be started **in ascending order**.
-- Peers with `hasFile = 1` must have the complete input file placed in `peer_<id>/` before starting.
+**Important:** Start peers in order!
 
 ---
 
-## 4. Running the System
+## Running the System
 
-### 4.1 Localhost Demo (Single Machine)
+### Setup
 
-In separate terminals:
+1. **Create peer directories:**
+   ```bash
+   mkdir -p peer_1001 peer_1002 peer_1003 peer_1004 peer_1005 peer_1006
+   ```
+
+2. **Place file in seeder directory:**
+   ```bash
+   cp tree.jpg peer_1001/
+   ```
+
+### Starting Peers
+
+Start in separate terminals **in order**:
 
 ```bash
+# Terminal 1
 python3 peerProcess.py 1001
+
+# Terminal 2
 python3 peerProcess.py 1002
+
+# Terminal 3
 python3 peerProcess.py 1003
-...
-Each peer will automatically:
 
-Parse Common.cfg and PeerInfo.cfg
+# Continue for remaining peers...
+```
 
-Create its folder (peer_<id>/)
+### Expected Behavior
 
-Start a server socket
+1. Peer reads config files and initializes bitfield
+2. Starts server socket on configured port
+3. Connects to all earlier peers
+4. Exchanges handshake & bitfield
+5. Begins piece exchange with choking/unchoking
+6. Terminates when all peers complete (no neighbors interested)
 
-Connect to all peers that appear earlier in PeerInfo.cfg
+### Monitoring
 
-Exchange handshake & bitfield
+```bash
+# Watch logs
+tail -f log_peer_1002.log
 
-Begin piece exchange & choking/unchoking
+# Verify final file
+diff peer_1001/tree.jpg peer_1002/tree.jpg
+```
 
-Log all events to log_peer_<id>.log
+---
 
-Merge pieces and terminate when all peers are complete
+## Grading Rubric Compliance
 
-4.2 Multi-Machine Demo (Required by Logistics)
-For the official demo:
+### 1. Start the Peer Processes (35%)
 
-Use multiple hosts (e.g., laptops, CISE servers like rain, thunder, etc.)
+#### ✅ Read Configuration Files (10%)
+**Implementation:**
+- `parse_common()` in `peerProcess.py` (lines 24-40) parses `Common.cfg`
+- `parse_peerinfo()` (lines 43-61) parses `PeerInfo.cfg`
+- Sets all required variables: k, p, m, file name, file size, piece size
 
-Replace localhost with real hostnames / IPs in PeerInfo.cfg
+**Log Evidence:**
+```
+[2025/12/03 15:55:10] Peer 1001 Start. Config: NumberOfPreferredNeighbors=3, UnchokingInterval=5, OptimisticUnchokingInterval=10, FileName=tree.jpg, FileSize=24301474, PieceSize=16384.
+```
 
-Ensure machines can reach each other (VPN if needed)
+#### ✅ TCP Connections to Prior Peers (15%)
+**Implementation:**
+- `connect_to()` function (lines 155-210) creates client connections
+- Connects to all peers with lower IDs (lines 358-373)
+- Retries up to 10 times with 0.3s delay
 
-Run each peer on its assigned host in order
+**Log Evidence:**
+```
+[Time]: Peer 1003 makes a connection to Peer 1001.
+[Time]: Peer 1003 makes a connection to Peer 1002.
+```
 
-Example:
+#### ✅ Start Piece Exchange (5%)
+**Implementation:**
+- After handshake + bitfield, `_maybe_request_piece()` begins automatically
+- `PeerConnection.run()` (lines 126-138) continuously handles messages
 
-yaml
-复制代码
-1001 rain.cise.ufl.edu 16001 1
-1002 storm.cise.ufl.edu 16002 0
-1003 thunder.cise.ufl.edu 16003 0
-5. Protocol Compliance (Mapped to Rubric)
-✔ Handshake (32 bytes)
-P2PFILESHARINGPROJ (18 bytes)
+#### ✅ Peer Termination (5%)
+**Implementation:**
+- Main loop (lines 410-433) checks if all neighbors are not interested
+- Only terminates when `my_bitfield.is_full()` AND `all_not_interested`
 
-10 zero bytes
+**Log Evidence:**
+```
+[Time]: Peer 1001 stops service because all peers have completed download (no neighbor is interested).
+```
 
-4-byte peer ID
+---
 
-Logged as “sent handshake” / “received handshake”
+### 2. After Connection (30%)
 
-✔ Bitfield Exchange
-Sent after handshake, logged accordingly.
+#### ✅ Handshake Message (5%)
+**Implementation:**
+- `pack_handshake()` in `handshake.py`: 18-byte header + 10 zeros + 4-byte peer ID
+- Sent immediately after connection (server: line 127, client: line 173)
 
-Bit order matches spec (MSB first per byte).
+**Log Evidence:**
+```
+[Time]: Peer 1001 sends a handshake to Peer 1004.
+[Time]: Peer 1001 received a handshake from Peer 1004.
+```
 
-✔ Interested / Not Interested
-Triggered whenever remote bitfield or HAVE changes.
+#### ✅ Exchange Bitfield Message (5%)
+**Implementation:**
+- `make_bitfield()` creates message type 5 with bitfield payload
+- Sent after handshake (server: line 130, client: line 186)
+- MSB-first encoding: piece 0 = byte 0 bit 7
 
-✔ Choking / Unchoking
-Every p seconds: choose preferred neighbors based on download rate
+**Log Evidence:**
+```
+[Time]: Peer 1001 sends a bitfield to Peer 1004.
+[Time]: Peer 1001 received a bitfield from Peer 1004.
+```
 
-Logs:
+#### ✅ Send Interested/Not Interested (5%)
+**Implementation:**
+- `_update_interest()` in `connection.py` (lines 257-272)
+- Sends interested if neighbor has pieces we need
+- Sends not interested if neighbor has no new pieces
 
-“Peer X has preferred neighbors [...]”
+#### ✅ CORRECTLY Send k Unchoke/Choke Every p Seconds (10%)
+**Implementation:**
+- `preferred_unchoke_loop()` (lines 213-265) runs every p=5 seconds
+- Calculates download rate from each neighbor
+- Selects top k=3 interested neighbors by rate
+- If seeder: selects k=3 randomly (line 251)
 
-“Peer X is choked/unchoked by Peer Y”
+**Log Evidence:**
+```
+[Time]: Peer 1001 has the preferred neighbors [1002, 1004, 1005].
+```
 
-✔ Optimistic Unchoking
-Every m seconds: randomly select one choked-but-interested peer
+#### ✅ Set Optimistically Unchoked Neighbor Every m Seconds (5%)
+**Implementation:**
+- `optimistic_unchoke_loop()` (lines 268-292) runs every m=10 seconds
+- Randomly selects from choked-but-interested neighbors (line 290)
 
-Logged explicitly
+**Log Evidence:**
+```
+[Time]: Peer 1001 has the optimistically unchoked neighbor 1003.
+```
 
-✔ Request / Piece / Have Messages
-One outstanding request at a time (no pipelining)
+---
 
-On receiving piece:
+### 3. File Exchange (30%)
 
-write piece
+#### ✅ Send Request Message (5%)
+**Implementation:**
+- `_maybe_request_piece()` (lines 274-290)
+- Sends request (type 6) when unchoked
+- Only one outstanding request per connection
 
-update bitfield
+**Log Evidence:**
+```
+[Time]: Peer 1002 sent 'request' for piece 5 to Peer 1001.
+```
 
-log download
+#### ✅ Send Have Message (5%)
+**Implementation:**
+- After downloading piece, sends have (type 4) to all neighbors (line 247)
 
-send HAVE to all neighbors
+**Log Evidence:**
+```
+[Time]: Peer 1001 received the 'have' message from Peer 1004 for the piece 0.
+```
 
-✔ Termination
-When peer completes full file, merges pieces.
+#### ✅ Send Not Interested/Interested Messages (10%)
+**Implementation:**
+- `_update_interest()` re-evaluates after every have/piece
+- Sends appropriate message based on neighbor's bitfield
 
-When no neighbors are interested, peer terminates gracefully.
+#### ✅ Send Piece Message (5%)
+**Implementation:**
+- `_handle_request()` (lines 209-228) reads piece and sends
+- Only sends if not choking peer
 
-6. Log Files
-Logs are written to log_peer_<id>.log.
-They include all required events:
+**Log Evidence:**
+```
+[Time]: Peer 1001 sent 'piece' message for piece 0 to Peer 1004.
+```
 
-Handshake sent/received
+#### ✅ Receive Have & Update Bitfield (3%)
+**Implementation:**
+- `_handle_have()` (lines 194-207) updates `remote_bitfield`
+- Re-evaluates interest after update
 
-Bitfield sent/received
+#### ✅ Downloaded Piece Logging (2%)
+**Implementation:**
+- `_handle_piece()` (lines 230-253) writes piece, updates bitfield, logs
 
-Connection made/received
+**Log Evidence:**
+```
+[Time]: Peer 1004 has downloaded the piece 0 from Peer 1001. Now the number of pieces it has is 1.
+```
 
-choke / unchoke
+---
 
-preferred neighbors change
+### 4. Stop Service Correctly (5%)
 
-optimistic unchoke
+#### ✅ Graceful Termination (5%)
+**Implementation:**
+- Terminates when complete AND no neighbors interested (lines 421-433)
+- Merges pieces before terminating (line 417)
+- Cleanup handled via `finally` block (line 443)
 
-interested / not interested
+**Log Evidence:**
+```
+[Time]: Peer 1001 has downloaded the complete file.
+[Time]: Peer 1001 stops service because all peers have completed download.
+```
 
-have
+---
 
-received piece
+## Protocol Implementation Details
 
-downloaded complete file
+### Message Format
 
-termination
+All messages (except handshake):
+```
+[4-byte length] [1-byte type] [variable payload]
+```
 
-Example:
+Length field does NOT include itself (counts only type + payload).
 
-yaml
-复制代码
-[2025/12/01 22:56:04] Peer 1005 sent ‘request’ for piece 20 to Peer 1003.
-[2025/12/01 22:56:04] Peer 1005 received the 'piece' message for piece 20 from Peer 1003.
-[2025/12/01 22:56:04] Peer 1005 has downloaded the piece 20 from Peer 1003. Now the number of pieces it has is 13.
-7. Demo Video
-Video link: TODO (YouTube / OneDrive / Canvas Studio)
+### Message Types (utils/message.py)
 
-The demo shows:
+| Type | Value | Payload | Description |
+|------|-------|---------|-------------|
+| `CHOKE` | 0 | None | Stop requesting |
+| `UNCHOKE` | 1 | None | Can request now |
+| `INTERESTED` | 2 | None | Want pieces from you |
+| `NOT_INTERESTED` | 3 | None | Don't want pieces |
+| `HAVE` | 4 | 4-byte piece index | Just got this piece |
+| `BITFIELD` | 5 | Bitfield bytes | All my pieces |
+| `REQUEST` | 6 | 4-byte piece index | Send me this piece |
+| `PIECE` | 7 | 4-byte index + data | Here's the piece |
 
-Configuration files
+### Bitfield Encoding (utils/bitfield.py)
 
-Starting peers in correct order
+- **Bit order:** MSB first per byte
+- **Byte 0:** Pieces 0-7 (bit 7 = piece 0, bit 0 = piece 7)
+- **Implementation:** Line 9: `(1 << (7 - bit_index))`
 
-Handshake & bitfield exchange (via logs)
+Example: 10 pieces → 2 bytes
+```
+Byte 0: 11111111 (pieces 0-7)
+Byte 1: 11000000 (pieces 8-9, bits 0-5 spare)
+```
 
-Choking/unchoking & optimistic unchoke events
+### Handshake (utils/handshake.py)
 
-Request/piece/have message flow
+```
+P2PFILESHARINGPROJ (18 bytes) + 10 zero bytes + peer_id (4 bytes big-endian)
+```
 
-Full download completion
+Total: 32 bytes
 
-Termination of all peers
+### Choking Algorithm (peerProcess.py)
 
-8. Notes
-Piece pipeline strictly limited to one outstanding request per peer connection
+**Preferred Neighbors (every 5 seconds):**
+1. Calculate bytes downloaded in last interval (line 234)
+2. Sort by download rate if not seeder (line 248)
+3. If seeder: shuffle randomly (line 251)
+4. Select top k=3 (line 254)
+5. Unchoke selected, choke others (lines 258-263)
 
-Bitfield representation matches project spec exactly
+**Optimistic Unchoke (every 10 seconds):**
+1. Filter: choked AND interested (line 284)
+2. Random choice (line 290)
+3. Unchoke selected peer
 
-Local piece files are automatically cleaned up after termination
+### Piece Selection (connection.py)
 
-The final merged file appears inside each peer_<id>/ folder
+**Sequential scan** (lines 280-290):
+- Find first piece where: neighbor has it, we don't, not requested
+- Not random as specified, but simpler implementation
 
-yaml
-复制代码
+### Request Pipeline
+
+**One outstanding request per connection:**
+- Request sent when unchoked (line 156)
+- Next request sent after receiving piece (line 253)
+
+---
+
+## Logging
+
+### Log Format (utils/logger.py)
+
+```
+[YYYY/MM/DD HH:MM:SS] <event description>
+```
+
+Timestamp format: `datetime.now().strftime("%Y/%m/%d %H:%M:%S")` (line 18)
+
+### All Required Log Events Implemented:
+
+✅ TCP connection made/received  
+✅ Handshake sent/received  
+✅ Bitfield sent/received  
+✅ Preferred neighbors change  
+✅ Optimistic unchoke neighbor change  
+✅ Choked/unchoked by peer  
+✅ Received have/interested/not interested  
+✅ Downloaded piece (with count)  
+✅ Completed download  
+
+### Example Log Output:
+
+```
+[2025/12/03 15:55:10] Peer 1001 Start. Config: NumberOfPreferredNeighbors=3...
+[2025/12/03 15:55:10] Peer 1001 is connected from Peer 1004.
+[2025/12/03 15:55:10] Peer 1001 received a handshake from Peer 1004.
+[2025/12/03 15:55:10] Peer 1001 sends a handshake to Peer 1004.
+[2025/12/03 15:55:10] Peer 1001 sends a bitfield to Peer 1004.
+[2025/12/03 15:55:10] Peer 1001 received the 'interested' message from Peer 1004.
+[2025/12/03 15:55:10] Peer 1001 sent 'piece' message for piece 0 to Peer 1004.
+[2025/12/03 15:55:11] Peer 1001 has downloaded the complete file.
+```
+
+---
+
+## Demo Video
+
+**Video Link:** [TODO: Insert link after recording]
+
+### What to Show in Video:
+
+1. **Configuration (1 min):**
+   - Show `Common.cfg` (FileSize=24301474, PieceSize=16384)
+   - Show `PeerInfo.cfg` with 6 peers
+   - Show `tree.jpg` in peer_1001 directory
+
+2. **Starting Peers (1 min):**
+   - Start peers in order (1001, 1002, 1003, 1004, 1005, 1006)
+   - Show logs appearing for each
+
+3. **Connections & Handshake (30 sec):**
+   - Show connection logs
+   - Show handshake/bitfield exchange
+
+4. **Choking/Unchoking (1-2 min):**
+   - Let run for 20-30 seconds
+   - Show preferred neighbor changes every 5 seconds
+   - Show optimistic unchoke every 10 seconds
+
+5. **Piece Exchange (1-2 min):**
+   - Show piece download logs with incrementing counts
+   - Show have message propagation
+
+6. **Completion (30 sec):**
+   - Show all peers log "downloaded complete file"
+   - Verify: `diff peer_1001/tree.jpg peer_1002/tree.jpg`
+
+---
+
+## Troubleshooting
+
+### "Address already in use"
+```bash
+lsof -i :16001  # Find process
+kill -9 <PID>
+```
+
+### Peers Can't Connect
+- Check firewall: `sudo ufw allow 16001/tcp`
+- Verify hostname: `ping 192.168.0.58`
+- Use UF VPN if off-campus
+
+### File Not Found
+```bash
+# Ensure seeder has file
+ls -lh peer_1001/tree.jpg
+```
+
+---
+
+## Project Submission
+
+**Submission Date:** December 3, 2025, 11:59 PM  
+**Demo Video:** [Link to be added]  
+**Group Members:** Robby Sleiti, Weien Xu, Abhik Shil
+
+---
+
+*This README was prepared for CNT4007 Fall 2025.*
