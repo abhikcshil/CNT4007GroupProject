@@ -137,7 +137,9 @@ class PeerConnection(threading.Thread):
                 frame = hdr + recv_all(self.sock, length)
                 msg = Message.decode(frame)
                 self._handle_message(msg)
-        except Exception:
+        except Exception as e:
+            if self.logger:
+                self.logger.custom(f"Peer {self.me_id} connection to {self.remote_id} error: {e}")
             self._alive = False
             self.stop()
 
