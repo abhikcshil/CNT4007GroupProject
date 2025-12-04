@@ -482,10 +482,24 @@ def main():
                         logger.custom(
                             f"Peer {me_id} stops service because all peers have completed download (no neighbor is interested)."
                         )
+                        # Gracefully close all connections
+                        for conn in neighbors.values():
+                            try:
+                                conn.stop()
+                            except Exception:
+                                pass
                         break
 
     except KeyboardInterrupt:
         pass
+    finally:
+        # Close all remaining connections
+        with neighbors_lock:
+            for conn in neighbors.values():
+                try:
+                    conn.stop()
+                except Exception:
+                    pass
 
 
 if __name__ == "__main__":
