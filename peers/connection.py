@@ -84,6 +84,7 @@ class PeerConnection(threading.Thread):
             try:
                 self._send(make_choke())
             except OSError:
+                self._alive = False
                 return
             if self.logger:
                 self.logger.choke(self.me_id, self.remote_id)
@@ -94,6 +95,7 @@ class PeerConnection(threading.Thread):
             try:
                 self._send(make_unchoke())
             except OSError:
+                self._alive = False
                 return
             if self.logger:
                 self.logger.unchoke(self.me_id, self.remote_id)
@@ -110,9 +112,12 @@ class PeerConnection(threading.Thread):
             pass
 
     def send_message(self, msg: Message):
-        encoded = msg.encode()
-        with self._send_lock:
-            self.sock.sendall(encoded)
+        try:
+            encoded = msg.encode()
+            with self._send_lock:
+                self.sock.sendall(encoded)
+        except (OSError, BrokenPipeError, ConnectionResetError):
+            self._alive = False
 
     def _send(self, msg: Message) -> None:
         """
@@ -296,8 +301,8 @@ class PeerConnection(threading.Thread):
         if self.am_choked:
             return
 
-        # Request up to 5 pieces in pipeline to keep download going
-        max_pipeline = 5
+        # Request up to 2 pieces in pipeline to keep download going
+        max_pipeline = 2
         requested_count = 0
         
         for i in range(self.num_pieces):

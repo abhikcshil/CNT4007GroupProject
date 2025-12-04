@@ -100,12 +100,22 @@ class PeerServer(threading.Thread):
         self.neighbors_lock = neighbors_lock
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        # Prevent timeouts and improve reliability
+        self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)
+        self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 1048576)  # 1MB send buffer
+        self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 1048576)  # 1MB receive buffer
+        self.sock.settimeout(60.0)  # 60 second timeout
 
     def run(self):
         self.sock.bind((self.host, self.port))
         self.sock.listen()
         while True:
             conn, addr = self.sock.accept()
+            # Configure accepted connection
+            conn.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)
+            conn.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 1048576)
+            conn.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 1048576)
+            conn.settimeout(60.0)
             try:
                 recv_buf = b""
                 while len(recv_buf) < HS_LEN:
@@ -170,7 +180,12 @@ def connect_to(
     attempts = 10
     for _ in range(attempts):
         try:
-            s = socket.create_connection((host, port), timeout=1.5)
+            s = socket.create_connection((host, port), timeout=5.0)
+            # Configure client socket
+            s.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)
+            s.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 1048576)
+            s.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 1048576)
+            s.settimeout(60.0)
 
             s.sendall(pack_handshake(me_id))
             logger.sent_handshake(me_id, peer_id)
@@ -235,6 +250,8 @@ def preferred_unchoke_loop(
         # only consider interested neighbors
         candidates = []
         for pid, conn in items:
+            if not conn.is_alive():
+                continue
             if conn.remote_interested:
                 downloaded = conn.get_and_reset_downloaded_bytes()
                 candidates.append((downloaded, pid, conn))
@@ -244,6 +261,8 @@ def preferred_unchoke_loop(
             optimistic_id = optimistic_state.get('current')
             with neighbors_lock:
                 for pid, conn in neighbors.items():
+                    if not conn.is_alive():
+                        continue
                     if pid != optimistic_id:
                         conn.choke()
             current_preferred.clear()
@@ -275,6 +294,8 @@ def preferred_unchoke_loop(
         optimistic_id = optimistic_state.get('current')
         with neighbors_lock:
             for pid, conn in neighbors.items():
+                if not conn.is_alive():
+                    continue
                 if pid in selected_ids:
                     conn.unchoke()
                 elif pid != optimistic_id:  # don't choke optimistic neighbor
@@ -301,6 +322,8 @@ def optimistic_unchoke_loop(
         # choose among choked but interested neighbors
         candidates = []
         for pid, conn in items:
+            if not conn.is_alive():
+                continue
             if conn.remote_interested and conn.peer_choked:
                 candidates.append((pid, conn))
 
