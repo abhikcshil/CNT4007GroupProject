@@ -203,7 +203,7 @@ diff peer_1001/tree.jpg peer_1002/tree.jpg
 
 **Log Evidence:**
 ```
-[2025/12/03 15:55:10] Peer 1001 Start. Config: NumberOfPreferredNeighbors=3, UnchokingInterval=5, OptimisticUnchokingInterval=10, FileName=tree.jpg, FileSize=24301474, PieceSize=16384.
+[2025/12/03 15:55:10] Peer 1001 Start. Config: NumberOfPreferredNeighbors=2, UnchokingInterval=5, OptimisticUnchokingInterval=10, FileName=tree.jpg, FileSize=24301474, PieceSize=16384.
 ```
 
 #### ✅ TCP Connections to Prior Peers (15%)
@@ -270,8 +270,8 @@ diff peer_1001/tree.jpg peer_1002/tree.jpg
 **Implementation:**
 - `preferred_unchoke_loop()` (lines 213-265) runs every p=5 seconds
 - Calculates download rate from each neighbor
-- Selects top k=3 interested neighbors by rate
-- If seeder: selects k=3 randomly (line 251)
+- Selects top k=2 interested neighbors by rate
+- If seeder: selects k=2 randomly (line 251)
 
 **Log Evidence:**
 ```
@@ -409,7 +409,7 @@ Total: 32 bytes
 1. Calculate bytes downloaded in last interval (line 234)
 2. Sort by download rate if not seeder (line 248)
 3. If seeder: shuffle randomly (line 251)
-4. Select top k=3 (line 254)
+4. Select top k=2 (line 254)
 5. Unchoke selected, choke others (lines 258-263)
 
 **Optimistic Unchoke (every 10 seconds):**
@@ -456,7 +456,7 @@ Timestamp format: `datetime.now().strftime("%Y/%m/%d %H:%M:%S")` (line 18)
 ### Example Log Output:
 
 ```
-[2025/12/03 15:55:10] Peer 1001 Start. Config: NumberOfPreferredNeighbors=3...
+[2025/12/03 15:55:10] Peer 1001 Start. Config: NumberOfPreferredNeighbors=2...
 [2025/12/03 15:55:10] Peer 1001 is connected from Peer 1004.
 [2025/12/03 15:55:10] Peer 1001 received a handshake from Peer 1004.
 [2025/12/03 15:55:10] Peer 1001 sends a handshake to Peer 1004.
