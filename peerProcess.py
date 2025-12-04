@@ -475,7 +475,8 @@ def main():
                 if neighbors and my_bf.is_full():
                     all_not_interested = True
                     for conn in neighbors.values():
-                        if conn.remote_interested:
+                        # Check if connection is alive and interested
+                        if conn.is_alive() and conn.remote_interested:
                             all_not_interested = False
                             break
                     if all_not_interested:
