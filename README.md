@@ -2,7 +2,7 @@
 
 **Course:** CNT4007  
 **Semester:** Fall 2025  
-**Programming Language:** Python 3.x  
+**Programming Language:** Python 3.10  
 **Due Date:** December 3, 2025, 11:59 PM
 
 ---
@@ -527,8 +527,8 @@ ls -lh peer_1001/tree.jpg
 ## Project Submission
 
 **Submission Date:** December 3, 2025, 11:59 PM  
-**Demo Video:** [Link to be added]  
-**Group Members:** Robby Sleiti, Weien Xu, Abhik Shil
+**Demo Video:** Submitted on canvas, but also here: https://uflorida-my.sharepoint.com/:v:/g/personal/w_xu1_ufl_edu/IQDuGsdwHEJfR6lreK22PP38AZqVPnJd-hycTGTchM-QoZU?e=Zg0fqa 
+**Group Members:** Robby Sleiti, Weien Xu, Abhik Shil, Shane Higgins
 
 ---
 
