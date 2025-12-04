@@ -106,7 +106,7 @@ CNT4007GroupProject/
 ### Common.cfg
 
 ```
-NumberOfPreferredNeighbors 3
+NumberOfPreferredNeighbors 2
 UnchokingInterval 5
 OptimisticUnchokingInterval 10
 FileName tree.jpg
@@ -115,7 +115,7 @@ PieceSize 16384
 ```
 
 **Parameters:**
-- `NumberOfPreferredNeighbors` (k=3): Number of preferred neighbors
+- `NumberOfPreferredNeighbors` (k=2): Number of preferred neighbors
 - `UnchokingInterval` (p=5): Seconds between preferred neighbor recalculations
 - `OptimisticUnchokingInterval` (m=10): Seconds between optimistic unchoke rotations
 - `FileName`: File being shared (tree.jpg)
